@@ -1,0 +1,31 @@
+// MY VARIABLES BREAKPOINTS
+//@import "theme/variable-breakpoints.scss";
+
+// LOAD BOOTSTRAP 5
+@import "~bootstrap/scss/bootstrap"; 
+
+// MY VARIABLES
+@import "theme/variables.scss";
+
+// TYPOGRAPHY
+@import "theme/typography.scss";
+
+// GLOBAL & THEME
+@import "theme/global.scss";
+
+// OWL carousel
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+
+
+// PAGE TEMPLATES
+@import 'pages/mainpage.scss';
+
+// Houses
+@import 'pages/houses.scss';
+
+// Blog
+//@import 'pages/blog.scss';
+
+// Page Technologia
+@import 'pages/technologia.scss';
+

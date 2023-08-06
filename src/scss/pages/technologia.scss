@@ -1,0 +1,77 @@
+.page-template-technologia {
+    .section-height-category {
+        background-position: center;
+    }
+}
+
+.technologia-standard {
+    &__item {
+        background: #efefef;
+        border-radius: 10px 10px 0 10px;
+
+        &:nth-child(2n) {
+            background-color: #fff;
+        }
+    }
+
+    &__item-img {
+        img {
+            height: 150px;
+            border-radius: 50%;
+            padding: 5px;
+            border: 5px solid #0dcc00;
+        }
+    }
+}
+
+// Slider
+.ba-Slider {
+    overflow: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 852px;
+    height: 480px;
+    border: 3px solid #0dcc00;
+    border-radius: 20px;
+
+    &__img {
+        width: 852px;
+        height: 480px;
+    }
+}
+
+.slider {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    background: transparent url('/wp-content/uploads/2023/05/slider-move.jpg');
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+#before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+
+}
+
+.ease {
+    transition: width ease .5s, left ease .5s;
+    -moz-transition: width ease .5s, left ease .5s;
+    -webkit-transition: width ease .5s, left ease .5s;
+}
+
+.page-template-contact {
+    .box-contact {
+        border-radius: 10px 10px 0 10px;
+        &__img {
+            height: 70px
+        }
+    }
+}
