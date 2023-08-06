@@ -5,13 +5,12 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package hatek-wp-theme
+ * @package wolobnp-wp-theme
  */
 
 get_header();
 
-$name = get_the_archive_title();
-$name_cat = strtolower(preg_replace('/-+/', '-', preg_replace('/[^\wáéíóú]/', '-', $name)));
+
 ?>
 
 <section class="d-flex align-items-end section-height-category head-category-<?php echo $name_cat; ?>">

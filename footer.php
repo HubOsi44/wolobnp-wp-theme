@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package hatek-wp-theme
+ * @package wolobnp-wp-theme
  */
 ?>
 
@@ -20,7 +20,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header d-flex py-1 justify-content-between border-0">
-                <img src="/wp-content/uploads/2023/05/logo-hatek.png" alt="hatek.com.pl" class="img-fluid p-1" style="height: 35px;">
+                <img src="/wp-content/uploads/2023/05/logo-wolobnp.png" alt="wolobnp.com.pl" class="img-fluid p-1" style="height: 35px;">
                 <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"></span>
                 </button>

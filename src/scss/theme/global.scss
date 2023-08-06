@@ -20,14 +20,7 @@
 
 // Tom menu with sticky
 #top-header {
-    .navbar-address {
-        @media screen and (min-width: 1700px) {
-            font-size: 18px;
-        }
-    }
-
     &.sticky {
-
         transition: 0.3s ease-in-out;
 
         @include media-breakpoint-up(xl) {
@@ -79,13 +72,6 @@
             }
         }
     }
-}
-
-.top-phone {
-    font-size: 1.25rem;
-    color: #fff;
-    font-weight: 300;
-    letter-spacing: 0.1em;
 }
 
 #top-header {
@@ -146,13 +132,6 @@
                     padding: 0.6rem 0.7rem;
                 }
             }
-
-            // &.current_page_item {
-            //     >a {
-            //         color: $green;
-            //         text-decoration: underline;
-            //     }
-            // }
         }
     }
 
@@ -201,7 +180,6 @@
         .dropdown-submenu {
             top: 0;
             left: 100%;
-            //margin-left: 0.125rem;
             margin-top: 0;
         }
     }
@@ -289,23 +267,6 @@
     }
 }
 
-// Category top
-.page-header-top {
-    height: 290px;
-
-    @include media-breakpoint-up(xl) {
-        height: 430px;
-    }
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    &__title-brand {
-        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
-    }
-}
-
 // Footer-widget
 .footer-widgets {
     background-color: #131212;
@@ -340,7 +301,7 @@
     }
 
     &__background {
-        background-image: url('/wp-content/uploads/2023/05/hatek-oferta-paralax-4-min.jpg');
+        background-image: url('');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -357,12 +318,6 @@
 
 .site-footer {
     background-color: #131212;
-}
-
-.banner-contact {
-    @include media-breakpoint-up(xl) {
-        margin-top: -60px;
-    }
 }
 
 .copyright-box {
@@ -446,271 +401,23 @@
 // Error 404
 .error404 {
     position: relative;
-    z-index:0;
- }
- 
- .error404:before {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     content: '';
-     background-image: url(/wp-content/uploads/2023/05/hatek-oferta-paralax-2-min.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     filter: grayscale(1);
-     opacity: .5;
-     z-index: -1;
- }
+    z-index: 0;
+}
 
-// Scroll
-.tst-scroll-hint-frame {
-    height: 74px;
-    width: 74px;
-    border-radius: 50%;
+.error404:before {
     position: absolute;
-    bottom: 50px;
-    left: calc(50% - 37px);
-    z-index: 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1);
-    transition: 0.6s ease-in-out;
-
-    .tst-scroll-hint {
-        transform: scale(0.8);
-        top: -5px;
-        position: relative;
-        height: 40px;
-        width: 25px;
-        border: solid 2px #fff;
-        border-radius: 20px;
-
-        &:before {
-            content: "";
-            height: 4px;
-            width: 4px;
-            border-radius: 50%;
-            background-color: #fff;
-            position: absolute;
-            top: 7px;
-            left: 50%;
-            -webkit-animation: scroll 1s infinite;
-            animation: scroll 1s infinite;
-        }
-    }
-}
-
-@-webkit-keyframes scroll {
-    0% {
-        -webkit-transform: translateY(0) translateX(-50%);
-        transform: translateY(0) translateX(-50%)
-    }
-
-    50% {
-        -webkit-transform: translateY(6px) translateX(-50%);
-        transform: translateY(6px) translateX(-50%)
-    }
-
-    100% {
-        -webkit-transform: translateY(0) translateX(-50%);
-        transform: translateY(0) translateX(-50%)
-    }
-}
-
-@keyframes scroll {
-    0% {
-        -webkit-transform: translateY(0) translateX(-50%);
-        transform: translateY(0) translateX(-50%)
-    }
-
-    50% {
-        -webkit-transform: translateY(6px) translateX(-50%);
-        transform: translateY(6px) translateX(-50%)
-    }
-
-    100% {
-        -webkit-transform: translateY(0) translateX(-50%);
-        transform: translateY(0) translateX(-50%)
-    }
-}
-
-// Animations text
-.title-slide-left-anim {
-    animation: slide-left 1.2s forwards
-}
-
-.title-slide-right-anim {
-    animation: slide-right 1.2s forwards
-}
-
-@keyframes slide-left {
-    from {
-        opacity: 0;
-        transform: translateX(-50px)
-    }
-
-    to {
-        opacity: 1;
-        transform: none
-    }
-}
-
-@keyframes slide-right {
-    from {
-        opacity: 0;
-        transform: translateX(50px)
-    }
-
-    to {
-        opacity: 1;
-        transform: none
-    }
-}
-
-@keyframes growOut {
-    0% {
-        transform: scale(0)
-    }
-
-    80% {
-        transform: scale(1.1)
-    }
-
-    100% {
-        transform: scale(1)
-    }
-}
-
-//Animation shapes
-.animation-1 {
-    -webkit-animation: swinging 3.5s linear forwards infinite;
-    animation: swinging 3.5s linear forwards infinite
-}
-
-@-webkit-keyframes swinging {
-    0% {
-        -webkit-transform: rotate(-30deg)
-    }
-
-    50% {
-        -webkit-transform: rotate(30deg)
-    }
-
-    100% {
-        -webkit-transform: rotate(-30deg)
-    }
-}
-
-@keyframes swinging {
-    0% {
-        transform: rotate(-30deg)
-    }
-
-    50% {
-        transform: rotate(30deg)
-    }
-
-    100% {
-        transform: rotate(-30deg)
-    }
-}
-
-
-/*=== Trigger  ===*/
-
-.animate {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-/*=== Optional Delays, change values here  ===*/
-.one {
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-}
-
-.two {
-    -webkit-animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-
-/*=== Animations start here  ===*/
-
-/*==== FADE IN UP ===*/
-@-webkit-keyframes fadeInUp {
-    from {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-.fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-}
-
-/*=== FADE IN DOWN ===*/
-.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-}
-
-@-webkit-keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+    opacity: .5;
+    z-index: -1;
 }
 
 //Qookie
@@ -780,21 +487,7 @@
     border-radius: 6px;
 }
 
-#offerformModal {
-    .modal-content {
-        background-image: url("/wp-content/uploads/2023/05/hatek-form-bg-2.jpg");
-        background-position: center left;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
 
-
-//Top Toolbar
-
-// .toolbar-area {
-//     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-// }
 
 .contact-info {
     margin: 0;
@@ -815,66 +508,4 @@
             text-decoration: none;
         }
     }
-}
-
-.toolbar-share {
-    li {
-        display: inline-block;
-        font-size: 14px;
-        line-height: 40px;
-        border-left: 1px solid rgba(255, 255, 255, 0.3);
-    }
-}
-
-// Top background pages
-.top-section-offer {
-    height: 290px;
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-
-    @include media-breakpoint-up(xl) {
-        height: 500px;
-    }
-
-    &:before {
-        background-image: linear-gradient(to right top, #141823, #1b202d, #222736, #293041, #30384b);
-        position: absolute;
-        content: '';
-        left: 0px;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        opacity: 0.5;
-    }
-
-    &__icon-logo {
-        filter: brightness(0) invert(1);
-        opacity: .6;
-    }
-}
-
-// Slider offer Gallery
-.slider-gallery {
-    position: relative;
-
-    &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        background-image: url('/wp-content/uploads/2023/05/hatek-oferta-paralax-2-min.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        filter: grayscale(1);
-        opacity: .5;
-    }
-}
-
-#slider-offer {
-    filter: drop-shadow(2px 2px 12px rgba(0, 0, 0, .5));
 }

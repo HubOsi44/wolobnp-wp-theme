@@ -5,7 +5,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package hatek-wp-theme
+ * @package wolobnp-wp-theme
  */
 
 get_header();

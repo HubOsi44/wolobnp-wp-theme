@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package hatek-wp-theme
+ * @package wolobnp-wp-theme
  */
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
                         <ul class="contact-info d-flex flex-row oswald-font fw-light">
                             <li class="contact-info__email me-4 pe-4">
                                 <i class="fa fa-envelope me-2 text-white"></i>
-                                <a href="mailto: hatek@hatek.com.pl" class="text-white">hatek@hatek.com.pl</a>
+                                <a href="mailto: wolobnp@wolobnp.com.pl" class="text-white">wolobnp@wolobnp.com.pl</a>
                             </li>
                             <li class="contact-info__phone me-4 pe-4 text-white">
                                 <i class="fa fa-phone me-2 text-white"></i>
@@ -46,7 +46,7 @@
                     <div class="col-lg-2">
                         <ul class="toolbar-share m-0 d-flex flex-row justify-content-end">
                             <li class="ps-4 ms-4">
-                                <a href="https://www.facebook.com/hatek.hatek.902" target="_blank" class="text-white"> <i class="fa fa-facebook"></i> </a>
+                                <a href="https://www.facebook.com/wolobnp.wolobnp.902" target="_blank" class="text-white"> <i class="fa fa-facebook"></i> </a>
                             </li>
                         </ul>
                     </div>
@@ -56,9 +56,9 @@
         <div class="top-header-menu">
             <div class="container-fluid px-xl-4">
                 <nav class="navbar navbar-expand-xl navbar-theme teko-font">
-                    <?php if (get_theme_mod('hatek_wp_theme_logo')) : ?>
+                    <?php if (get_theme_mod('wolobnp_wp_theme_logo')) : ?>
                         <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" class="navbar-brand align-items-center top-logo">
-                            <img src="<?php echo esc_url(get_theme_mod('hatek_wp_theme_logo')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+                            <img src="<?php echo esc_url(get_theme_mod('wolobnp_wp_theme_logo')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                         </a>
                     <?php endif; ?>
                     <!-- <address class="navbar-address mb-0 ms-lg-5"><i class="fa fa-phone text-green me-2"></i> <span class="text-dark">+48 23 692 77 31</span></address> -->

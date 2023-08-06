@@ -5,7 +5,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package WP_Bootstrap_Starter
+ * @package wolobnp-wp-theme
  */
 
 get_header(); ?>

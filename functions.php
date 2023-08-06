@@ -6,18 +6,18 @@
 /**
  * Enqueue scripts and styles.
  */
-function wp_hatek_scripts()
+function wp_wolobnp_scripts()
 {
   // load bootstrap & AItheme styles css
   global $ver_num;
   $ver_num = mt_rand();
-  wp_enqueue_style('wp-hatek-css', get_template_directory_uri() . '/dist/style.css', array(), $ver_num, 'all');
+  wp_enqueue_style('wp-wolobnp-css', get_template_directory_uri() . '/dist/style.css', array(), $ver_num, 'all');
   wp_enqueue_style('font-awesome-4', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), null);
   wp_enqueue_script('jquery');
   if (!is_admin()) wp_deregister_script('jquery');
   wp_enqueue_script('my_javascript_file', get_template_directory_uri() . '/dist/main.bundle.js', array(), $ver_num, true);
 }
-add_action('wp_enqueue_scripts', 'wp_hatek_scripts');
+add_action('wp_enqueue_scripts', 'wp_wolobnp_scripts');
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -209,28 +209,28 @@ add_filter('show_admin_bar', '__return_false');
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 
-function wp_hatek_widgets_init()
+function wp_wolobnp_widgets_init()
 {
   register_sidebar(array(
-    'name' => esc_html__('static', 'hatek-wp-theme'),
+    'name' => esc_html__('static', 'wolobnp-wp-theme'),
     'id' => 'static',
-    'description' => esc_html__('Add widgets here.', 'hatek-wp-theme'),
+    'description' => esc_html__('Add widgets here.', 'wolobnp-wp-theme'),
     'before_widget' => '<div>',
     'after_widget' => '</div>',
   ));
   register_sidebar(array(
-    'name'          => esc_html__('Bottom menu services', 'hatek-wp-theme'),
+    'name'          => esc_html__('Bottom menu services', 'wolobnp-wp-theme'),
     'id'            => 'menu-services',
-    'description'   => esc_html__('Add widgets here.', 'hatek-wp-theme'),
+    'description'   => esc_html__('Add widgets here.', 'wolobnp-wp-theme'),
     'before_widget' => '<div id="%1$s" class="bottom-nav-menu widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h5 class="bottom-nav-menu__title mb-2 mb-lg-3 font-weight-bold">',
     'after_title'   => '</h5>',
   ));
   register_sidebar(array(
-    'name'          => esc_html__('Bottom menu about', 'hatek-wp-theme'),
+    'name'          => esc_html__('Bottom menu about', 'wolobnp-wp-theme'),
     'id'            => 'menu-about',
-    'description'   => esc_html__('Add widgets here.', 'hatek-wp-theme'),
+    'description'   => esc_html__('Add widgets here.', 'wolobnp-wp-theme'),
     'before_widget' => '<div id="%1$s" class="bottom-nav-menu widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h5 class="bottom-nav-menu__title mb-2 mb-lg-3 font-weight-bold">',
@@ -238,7 +238,7 @@ function wp_hatek_widgets_init()
   ));
 }
 
-add_action('widgets_init', 'wp_hatek_widgets_init');
+add_action('widgets_init', 'wp_wolobnp_widgets_init');
 
 
 add_filter('widget_text', 'do_shortcode');
