@@ -7,21 +7,32 @@ get_header();
 
 //Hero
 $hero_cnt = get_field('hero_cnt');
-$hero_background_desktop = get_field('hero_background_desktop');
-$hero_background_mobile = get_field('hero_background_mobile');
-$hero_widget = get_field('hero_widget');
+
 ?>
 
-<!-- Main hero -->
-<?php get_template_part('template-parts/main-hero'); ?>
-
-<!-- O nas -->
-<?php get_template_part('template-parts/main-about'); ?>
 
 
-<!-- Współpraca & Partnerzy -->
-<?php //get_template_part('template-parts/main-cooperation'); 
-?>
+
+
+
+<!-- Sekcja Co dobrego u Ciebie w firmie? -->
+
+<section clas="py-4 py-lg-5 container-fluid">
+    <div class="row">
+        <div class="col-xl-3">
+
+            Biznes się zmienia. Rośnie świadomość, że
+
+        </div>
+        <div class="col-xl-9">
+
+            <!-- Owl Carousel slider with youtube modals -->
+
+        </div>
+    </div>
+</section>
+
+
 
 <?php
 while (have_posts()) : the_post();
