@@ -6,46 +6,4 @@
     background-attachment: fixed;
     z-index: 0;
     position: relative;
-
-    .top-hero-cnt {
-        z-index: 9;
-    }
-
-    &:before {
-        background-image: linear-gradient(to right top, #141823, #1b202d, #222736, #293041, #30384b);
-        position: absolute;
-        content: '';
-        left: 0px;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        opacity: 0.7;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .top-hero {
-        .top-hero-cnt {
-            padding-top: 200px;
-            padding-bottom: 200px;
-        }
-    }
-}
-
-.top-hero-offer-list {
-    li {
-        text-shadow: 0 0 16px rgba(0, 0, 0, .7);
-        display: flex;
-        align-items: center;
-
-        i {
-            font-size: 24px;
-        }
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .top-hero {
-        height: 100vh;
-    }
 }

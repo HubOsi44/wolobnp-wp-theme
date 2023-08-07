@@ -2,25 +2,19 @@
 // #Colors
 // ------------------------------------ //
 
-$red: #e3000f;
-$green: #00943C;
+$red: #ed1c24;
 $light-gray: #f8f8f8;
 $gray-dark: #2e2f33;
-$blue-dark: #030225;
 
 $names: (
     red,
-    green,
     light-gray,
-    gray-dark,
-    blue-dark
+    gray-dark
 );
 $colors: (
     $red,
-    $green,
     $light-gray,
-    $gray-dark,
-    $blue-dark
+    $gray-dark
 );
 
 @each $name in $names {

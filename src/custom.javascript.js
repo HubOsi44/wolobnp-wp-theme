@@ -59,7 +59,17 @@
             }
         }
     });
-
+    // Open youtube testmonials on modal
+    let $videoSrc;
+    jQuery('.video-btn').click(function () {
+        $videoSrc = jQuery(this).data("src");
+    });
+    jQuery('#ModalVideo').on('shown.bs.modal', function (e) {
+        jQuery("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    });
+    jQuery('#ModalVideo').on('hide.bs.modal', function (e) {
+        jQuery("#video").attr('src', $videoSrc);
+    });
     // Add data-toggle to link menu
     $('#menu-item-178').find('a').attr('data-bs-toggle', 'modal');
     $('#menu-item-178').find('a').attr('data-bs-target', '#offerformModal');
