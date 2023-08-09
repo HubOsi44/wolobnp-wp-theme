@@ -7,3 +7,33 @@
     z-index: 0;
     position: relative;
 }
+
+// Testmonials
+.testmonials {
+    &__item {}
+}
+
+//Video modal
+.video-btn {
+    cursor: pointer;
+}
+
+.modal-video {
+    .modal-body {
+        position: relative;
+        padding: 0;
+
+        .close {
+            &.close-video {
+                position: absolute;
+                right: -30px;
+                top: 0;
+                z-index: 999;
+                font-size: 2rem !important;
+                font-weight: 400 !important;
+                color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+}
