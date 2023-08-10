@@ -13,6 +13,29 @@
     &__item {}
 }
 
+.owl-carousel .owl-nav :is(button.owl-next, button.owl-prev) {
+    background-color: #e3000f;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.4));
+}
+
+.owl-carousel .owl-nav :is(button.owl-next, button.owl-prev) i {
+    font-size: 27px;
+    color: #fff;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
 //Video modal
 .video-btn {
     cursor: pointer;
@@ -23,17 +46,70 @@
         position: relative;
         padding: 0;
 
-        .close {
+        .btn-close {
             &.close-video {
+                @include media-breakpoint-up(md) {
+                    right: -30px;
+                }
+
                 position: absolute;
-                right: -30px;
+                right: 0;
                 top: 0;
                 z-index: 999;
-                font-size: 2rem !important;
+                font-size: 1rem !important;
                 font-weight: 400 !important;
                 color: #fff;
                 opacity: 1;
             }
         }
+    }
+}
+
+// Form
+.form-box {
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+}
+
+.page-template-templates {
+
+    .wpcf7-not-valid-tip,
+    .title-field-form {
+        font-size: 14px;
+    }
+}
+
+.wpcf7-acceptance {
+    .wpcf7-list-item-label {
+        font-size: 12px;
+        display: inline-block;
+    }
+}
+
+.wpcf7-submit {
+    border: none;
+    background-color: $red;
+    color: #fff !important;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+}
+
+// FAQ
+.qa {
+    &__item {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        border: 2px solid rgba(0, 0, 0, .1);
+        cursor: pointer;
+    }
+}
+
+//No dobrze - co dajemy Twojej firmie?
+.co-dajemy {
+    &__item {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
     }
 }

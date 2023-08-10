@@ -23,12 +23,12 @@
         $("#cookie-warn").show();
     }
     // Owl Carousel Slider with youtube films testmonials
-    var maincats = $("#testmonials");
-    maincats.owlCarousel({
+    var testmonials = $("#testmonials");
+    testmonials.owlCarousel({
         loop: true,
         margin: 15,
-        responsiveClass: true,
         nav: true,
+        responsiveClass: true,
         navText: [
             "<i class='fa fa-angle-left'></i>",
             "<i class='fa fa-angle-right'></i>"
@@ -36,26 +36,23 @@
         responsive: {
             0: {
                 items: 1,
-                nav: true
+                nav:true
             },
             600: {
                 items: 3,
-                nav: true
+                nav:true
             },
             1000: {
                 items: 3,
-                nav: true,
-                loop: false
+                nav:true
             },
             1200: {
                 items: 3,
-                nav: true,
-                loop: true
+                nav:true
             },
             1700: {
                 items: 4,
-                nav: true,
-                loop: true
+                nav:true
             }
         }
     });
@@ -70,9 +67,6 @@
     jQuery('#ModalVideo').on('hide.bs.modal', function (e) {
         jQuery("#video").attr('src', $videoSrc);
     });
-    // Add data-toggle to link menu
-    $('#menu-item-178').find('a').attr('data-bs-toggle', 'modal');
-    $('#menu-item-178').find('a').attr('data-bs-target', '#offerformModal');
 })();
 
 

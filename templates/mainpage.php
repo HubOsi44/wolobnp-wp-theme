@@ -82,7 +82,7 @@ $faq_tytul = get_field('faq_tytul');
 <!-- Wolontariat pracowniczy ze Szlachetną Paczką – to działa! -->
 <section id="wolontariat-pracowniczy-boxy" class="wolontariat-pracowniczy-boxy py-4 py-lg-5 bg-gray-light">
     <div class="container">
-        <?= $wolontariat_pracowniczy_tytu; ?>
+        <?= $wolontariat_pracowniczy_tytul; ?>
         <?php if (have_rows('wolontariat_pracowniczy_boxy')) : ?>
             <div class="row">
                 <?php
@@ -105,13 +105,17 @@ $faq_tytul = get_field('faq_tytul');
 </section>
 
 <!-- Contact form & Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt -->
-<section class="form-box py-4 py-lg-5">
+<section class="form-box-wrap py-4 py-lg-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-3 mb-lg-0">
                 <!-- Form -->
+                <div class="form-box p-4 bg-white">
+                    <?= apply_shortcodes('[contact-form-7 id="7ca430d" title="Formularz kontaktowy"]'); ?>
+                </div>
             </div>
             <div class="col-lg-6">
+                <h2 class="text-center mb-3 mb-lg-5 fw-bold">Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt</h2>
                 <div class="d-flex justify-content-around justify-content-lg-between">
                     <p class="standard-title-5 social-title-share mb-0">
                         <a class="text-blue" title="Share Facebook" href="https://www.facebook.com/sharer?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>" target="_blank" rel="noopener noreferrer">
@@ -139,14 +143,14 @@ $faq_tytul = get_field('faq_tytul');
     <div class="container">
         <?= $co_dajemy_tytul; ?>
         <?php if (have_rows('co_dajemy_boxy')) : ?>
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php
                 while (have_rows('co_dajemy_boxy')) : the_row();
                     $tytul = get_sub_field('tytul');
                     $opis = get_sub_field('opis');
                 ?>
-                    <div class="col-lg-4 text-center">
-                        <div class="co-dajemy__item">
+                    <div class="col-lg-4 text-center mb-3 mb-lg-4">
+                        <div class="co-dajemy__item p-3 text-center">
                             <?= $tytul; ?>
                             <?= $opis; ?>
                         </div>
@@ -188,10 +192,10 @@ $faq_tytul = get_field('faq_tytul');
 </section>
 
 <!-- Najczęściej zadawane pytania -->
-<section id="faq" class="faq py-4 py-lg-5 bg-gray-light">
+<section id="faq" class="faq py-4 py-lg-5">
     <div class="container">
         <?= $faq_tytul; ?>
-        <div class="row justify-content-center mb-3 mb-lg-5">
+        <div class="row justify-content-center">
             <?php if (have_rows('faq')) : ?>
                 <?php while (have_rows('faq')) : the_row();
                     $pytanie = get_sub_field('pytanie');
@@ -225,9 +229,7 @@ endwhile;
     <div class="modal-dialog modal-dialog-centered align-items-center modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <button type="button" class="btn-close close-video" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <button type="button" class="btn-close btn-close-white close-video" data-bs-dismiss="modal" aria-label="Close" title="Zamknij film"></button>
                 <!-- 16:9 aspect ratio -->
                 <div class="ratio ratio-16x9">
                     <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
