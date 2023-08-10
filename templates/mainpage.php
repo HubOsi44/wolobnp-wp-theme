@@ -107,7 +107,7 @@ $faq_tytul = get_field('faq_tytul');
 <!-- Contact form & Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt -->
 <section class="form-box-wrap py-4 py-lg-5">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-6 mb-3 mb-lg-0">
                 <!-- Form -->
                 <div class="form-box p-4 bg-white">

@@ -22,7 +22,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php //wp_body_open(); ?>
+    <?php /* wp_body_open(); 
     <header id="top-header" class="fixed-top bg-white" role="banner">
         <div class="top-header-menu">
             <div class="container-fluid px-xl-4">
@@ -52,3 +52,4 @@
             </div>
         </div>
     </header>
+    */?>
