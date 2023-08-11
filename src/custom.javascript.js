@@ -1,13 +1,13 @@
 (function () {
-    window.addEventListener('scroll', (event) => {
-        var btnscroll = document.querySelector('#top-header');
-        var scrollValue = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollValue > 0) {
-            btnscroll.classList.add("sticky");
-        } else {
-            btnscroll.classList.remove("sticky");
-        }
-    });
+    // window.addEventListener('scroll', (event) => {
+    //     var btnscroll = document.querySelector('#top-header');
+    //     var scrollValue = window.pageYOffset || document.documentElement.scrollTop;
+    //     if (scrollValue > 0) {
+    //         btnscroll.classList.add("sticky");
+    //     } else {
+    //         btnscroll.classList.remove("sticky");
+    //     }
+    // });
 
     //Qookie
     var sName = "cookiesok";
@@ -36,25 +36,32 @@
         responsive: {
             0: {
                 items: 1,
-                nav:true
+                nav: true
             },
             600: {
                 items: 3,
-                nav:true
+                nav: true
             },
             1000: {
                 items: 3,
-                nav:true
+                nav: true
             },
             1200: {
                 items: 3,
-                nav:true
+                nav: true
             },
             1700: {
                 items: 4,
-                nav:true
+                nav: true
             }
         }
+    });
+    // Custom Button
+    $('.customNextBtn').click(function () {
+        testmonials.trigger('next.owl.carousel');
+    });
+    $('.customPreviousBtn').click(function () {
+        testmonials.trigger('prev.owl.carousel');
     });
     // Open youtube testmonials on modal
     let $videoSrc;
