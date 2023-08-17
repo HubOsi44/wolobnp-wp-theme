@@ -308,3 +308,51 @@
         text-decoration: none !important;
     }
 }
+
+//underline line effect
+.underline-effect {
+    position: relative;
+    z-index: 0;
+
+    &:after {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 9px;
+        left: 0;
+        z-index: -1;
+    }
+
+    &--red {
+        &:after {
+            background-color: $red;
+        }
+    }
+
+    &--green {
+        &:after {
+            background-color: $green;
+        }
+    }
+}
+
+// bg text
+.text-bg {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: split;
+    box-decoration-break: split;
+    display: inline;
+
+    &--red {
+        background: $red;
+        box-shadow: 5px 0 0 $red, -5px 0 0 $red;
+    }
+
+    &--green {
+        background: $green;
+        box-shadow: 5px 0 0 $green, -5px 0 0 $green;
+    }
+}

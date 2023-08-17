@@ -3,7 +3,7 @@
 // ------------------------------------ //
 
 $red: #ed1c24;
-$green: #00965E;
+$green: #0d9b63;
 $gray-light: #EFEFEF;
 
 $names: (
@@ -38,13 +38,17 @@ $colors: (
             color: nth($colors, $i) !important;
             background: #fff;
         }
+
+        &--radius-more {
+            border-radius: 35px;
+        }
     }
 }
 
 //Custom Btns
 .btn-green-swipe,
 .btn-white-swipe,
-.btn-whithout-swipe {
+.btn-red-swipe {
     background-color: $green;
     color: #fff;
     overflow: hidden;
@@ -75,12 +79,26 @@ $colors: (
     }
 }
 
-.btn-white-swipe {
-    background-color: $white !important;
-    color: $green !important;
+.btn-red-swipe {
+    background-color: $red !important;
+    color: #fff !important;
 
     &:before {
-        background-color: $green !important;
+        background-color: #fff !important;
+    }
+
+    &:hover {
+        color: $red !important;
+        background-color: $red !important;
+    }
+}
+
+.btn-white-swipe {
+    background-color: $white !important;
+    color: $red !important;
+
+    &:before {
+        background-color: $red !important;
     }
 
     &:hover {
@@ -89,18 +107,103 @@ $colors: (
     }
 }
 
-.btn-whithout-swipe {
-    background-color: transparent !important;
-    color: #fff !important;
-    border: 1px solid #fff;
+//Carousel 
+$carousel-shadow: rgba(0, 0, 0, 0.3);
 
-    &:before {
-        background-color: #fff !important;
+@mixin carousel-shadow {
+    -webkit-box-shadow: 0px 0px 15px 0px $carousel-shadow;
+    -moz-box-shadow: 0px 0px 15px 0px $carousel-shadow;
+    box-shadow: 0px 0px 15px 0px $carousel-shadow;
+}
+
+// Pulse animation
+.pulse-animation {
+    .video-btn {
+        position: absolute;
+        text-align: center;
+        box-shadow: 0 12px 24px 0 rgba(228, 6, 19, .5);
+        border-radius: 50%;
+        background: #ed1c24;
+        color: #fff;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            height: 150%;
+            width: 150%;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #fff;
+            z-index: -1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 110%;
+            width: 110%;
+            line-height: 110px;
+            background: #ed1c24;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-border 1500ms ease-out infinite;
+        }
     }
 
-    &:hover {
-        color: $green !important;
-        background-color: transparent !important;
-        border: 1px solid #fff;
+    &--sm {
+        .video-btn {
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            font-size: 15px;
+        }
+    }
+
+    &--lg {
+        .video-btn {
+            height: 65px;
+            width: 65px;
+            line-height: 65px;
+            font-size: 20px;
+        }
+    }
+
+    &--center {
+        .video-btn {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &--top-left {
+        .video-btn {
+            left: 10%;
+            top: 10%;
+        }
+    }
+}
+
+.fa-play {
+    &:before {
+        content: "\f04b";
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.3);
+        opacity: 0
     }
 }

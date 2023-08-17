@@ -23,6 +23,8 @@ $co_dajemy_tytul = get_field('co_dajemy_tytul');
 
 // Jak to działa? Wolontariat z Paczką w Banku BNP Paribas
 $jak_to_dziala_tytul = get_field('jak_to_dziala_tytul');
+$jak_to_dziala_opis = get_field('jak_to_dziala_opis');
+$jak_to_dziala_liczby = get_field('jak_to_dziala_liczby');
 
 // Co dobrego u Ciebie w firmie?
 $co_dobrego_tytul = get_field('co_dobrego_tytul');
@@ -33,6 +35,10 @@ $partner_kampanii_opis = get_field('partner_kampanii_opis');
 
 // Najczęściej zadawane pytania
 $faq_tytul = get_field('faq_tytul');
+
+// Contact form & share option
+$share_email = get_field('share_email');
+
 ?>
 
 <section id="hero" class="top-hero hero" style="background-image: url('<?= $hero_bg; ?>')">
@@ -40,7 +46,7 @@ $faq_tytul = get_field('faq_tytul');
 </section>
 
 <!-- Co dobrego u Ciebie w firmie? -->
-<section id="co-dobrego-firmie" class="co-dobrego-firmie py-4 py-lg-5">
+<section id="co-dobrego-firmie" class="co-dobrego-firmie py-4 py-lg-5 bg-red container-fluid">
     <?= $co_dobrego_wstep; ?>
 </section>
 
@@ -57,18 +63,33 @@ $faq_tytul = get_field('faq_tytul');
                     <?php
                     $counter = 0;
                     while (have_rows('cytaty')) : the_row();
+                        $cytat_tytul = get_sub_field('cytat_tytul');
                         $quote = get_sub_field('quote');
                         $quote_autor = get_sub_field('quote_autor');
                         $img = get_sub_field('quote_image');
                         $youtube_link = get_sub_field('youtube_link');
                     ?>
                         <div class="d-flex flex-column testmonials__item">
-                            <?php if ($img) : ?>
-                                <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto">
+                            <div class="owl-item-inner  carousel-shadow flex-grow-1">
+                                <div class="testmonials__item-top position-relative">
+                                    <?php if ($img) : ?>
+                                        <a class="video-btn pulse-animation pulse-animation--sm pulse-animation--top-left" title="Otwórz" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="<?= $youtube_link; ?>">
+                                            <span class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></span>
+                                        </a>
+                                        <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto position-relative">
+                                </div>
                             <?php endif; ?>
-                            <div class="testmonials__item-bottom">
-                                <p class=""><?= $quote_autor; ?></p>
-                                <a class="video-btn" title="Otwórz" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="<?= $youtube_link; ?>">Otwórz wypowiedź</a>
+                            <div class="testmonials__item-bottom text-center p-4">
+                                <?php if ($cytat_tytul) : ?>
+                                    <p class="text-center text-white standard-title-6"><strong class="text-bg text-bg--green"><?= $cytat_tytul; ?></strong></p>
+                                <?php endif; ?>
+                                <?php if ($quote) : ?>
+                                    <p class="text-center lh-13 fs-14 fst-italic"><?= $quote; ?></p>
+                                <?php endif; ?>
+                                <p class="lh-13 fw-bold fs-14">
+                                    <?= $quote_autor; ?>
+                                </p>
+                            </div>
                             </div>
                         </div>
                         <?php $counter++; ?>
@@ -91,12 +112,16 @@ $faq_tytul = get_field('faq_tytul');
                     $img = get_sub_field('obrazek');
                     $opis = get_sub_field('opis');
                 ?>
-                    <div class="col-lg-3 text-center">
-                        <?php if ($img) : ?>
-                            <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto mb-3">
-                        <?php endif; ?>
-                        <?= $tytul; ?>
-                        <?= $opis; ?>
+                    <div class="col-lg-3 mb-3 mb-lg-0">
+                        <div class="px-lg-4">
+                            <?php if ($img) : ?>
+                                <div class="text-center">
+                                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto mb-2">
+                                </div>
+                            <?php endif; ?>
+                            <?= $tytul; ?>
+                            <?= $opis; ?>
+                        </div>
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -105,7 +130,7 @@ $faq_tytul = get_field('faq_tytul');
 </section>
 
 <!-- Contact form & Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt -->
-<section class="form-box-wrap py-4 py-lg-5">
+<section class="form-box-wrap py-4 py-lg-5 bg-red">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-3 mb-lg-0">
@@ -115,23 +140,8 @@ $faq_tytul = get_field('faq_tytul');
                 </div>
             </div>
             <div class="col-lg-6">
-                <h2 class="text-center mb-3 mb-lg-5 fw-bold">Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt</h2>
-                <div class="d-flex justify-content-around justify-content-lg-between">
-                    <p class="standard-title-5 social-title-share mb-0">
-                        <a class="text-blue" title="Share Facebook" href="https://www.facebook.com/sharer?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </p>
-                    <p class="standard-title-5 social-title-share mb-0">
-                        <a class="text-blue" title="Share Twitter" href="http://twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </p>
-                    <p class="standard-title-5 social-title-share mb-0">
-                        <a class="text-blue" title="Share LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;summary=&amp;source=<?php bloginfo('name'); ?>" target="_new" rel="noopener noreferrer">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </p>
+                <div class="">
+                    <?= $share_email; ?>
                 </div>
             </div>
         </div>
@@ -140,7 +150,7 @@ $faq_tytul = get_field('faq_tytul');
 
 <!-- No dobrze - co dajemy Twojej firmie? -->
 <section id="co-dajemy" class="co-dajemy py-4 py-lg-5">
-    <div class="container">
+    <div class="container-fluid">
         <?= $co_dajemy_tytul; ?>
         <?php if (have_rows('co_dajemy_boxy')) : ?>
             <div class="row justify-content-center">
@@ -148,9 +158,15 @@ $faq_tytul = get_field('faq_tytul');
                 while (have_rows('co_dajemy_boxy')) : the_row();
                     $tytul = get_sub_field('tytul');
                     $opis = get_sub_field('opis');
+                    $icon = get_sub_field('icon');
                 ?>
-                    <div class="col-lg-4 text-center mb-3 mb-lg-4">
-                        <div class="co-dajemy__item p-3 text-center">
+                    <div class="col-lg mb-3 mb-lg-0">
+                        <div class="co-dajemy__item px-lg-4">
+                            <?php if ($icon) : ?>
+                                <div class="text-center">
+                                    <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" class="img-fluid mx-auto mb-2">
+                                </div>
+                            <?php endif; ?>
                             <?= $tytul; ?>
                             <?= $opis; ?>
                         </div>
@@ -165,12 +181,12 @@ $faq_tytul = get_field('faq_tytul');
 <section id="jak-to-dziala" class="jak-to-dziala py-4 py-lg-5 bg-green">
     <div class="container">
         <?= $jak_to_dziala_tytul; ?>
-        <div class="row">
-            <div class="col-lg-6">
-                Opis
+        <div class="row justify-content-evenly align-items-center">
+            <div class="col-lg-4">
+                <?= $jak_to_dziala_opis; ?>
             </div>
-            <div class="col-lg-6">
-                Liczby
+            <div class="col-lg-6" id="counter">
+                <?= $jak_to_dziala_liczby; ?>
             </div>
         </div>
     </div>
@@ -185,7 +201,7 @@ $faq_tytul = get_field('faq_tytul');
 </section>
 
 <!-- Partner kampanii -->
-<section id="partner" class="partner py-4 py-lg-5 bg-gray-light">
+<section id="partner" class="partner py-4 py-lg-5 bg-green">
     <div class="container">
         <?= $partner_kampanii_opis; ?>
     </div>
@@ -226,7 +242,7 @@ endwhile;
 
 <!-- Modal Film -->
 <div class="modal modal-video fade" id="ModalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered align-items-center modal-xl" role="document">
+    <div class="modal-dialog modal-dialog-centered align-items-center modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <button type="button" class="btn-close btn-close-white close-video" data-bs-dismiss="modal" aria-label="Close" title="Zamknij film"></button>

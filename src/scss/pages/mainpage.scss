@@ -36,6 +36,37 @@
     right: 0;
 }
 
+.carousel-shadow {
+    margin: 15px;
+    @include carousel-shadow;
+}
+
+.owl-custom-btn {
+    color: #decccc;
+    border-radius: 50%;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: $red;
+        background-color: #fff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
+    }
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
+.owl-carousel.owl-drag .owl-item {
+    display: flex;
+}
+
 //Video modal
 .video-btn {
     cursor: pointer;
@@ -90,11 +121,16 @@
     border: none;
     background-color: $red;
     color: #fff !important;
-    padding: 0.375rem 0.75rem;
-    border-radius: 6px;
-    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 35px;
+    font-weight: bold;
     display: block;
     width: 100%;
+}
+
+.text-sm-form {
+    font-size: 12px;
+    display: inline-block;
 }
 
 // FAQ
@@ -106,10 +142,9 @@
     }
 }
 
-//No dobrze - co dajemy Twojej firmie?
-.co-dajemy {
-    &__item {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-        border-radius: 6px;
-    }
+//Hero 
+.top-hero {
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
 }

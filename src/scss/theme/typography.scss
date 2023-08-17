@@ -2,7 +2,7 @@
 // #Typography rules
 // ------------------------------------ //
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap&subset=latin-ext');
 
 //Poppins
 $poppins-font-family: "Poppins", sans-serif;
@@ -33,8 +33,8 @@ body {
   line-height: 1.5;
 }
 
-.lh-16 {
-  line-height: 1.6;
+.fs-14 {
+  font-size: 14px !important;
 }
 
 a {
@@ -46,4 +46,78 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
+}
+
+
+// standard size fonts
+@media (min-width: 360px) {
+  .standard-title-1 {
+    font-size: calc(1.8125rem + ((1vw - 3.6px) * 1.0256));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-1 {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 360px) {
+  .standard-title-2 {
+    font-size: calc(1.625rem + ((1vw - 3.6px) * 0.641));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 360px) {
+  .standard-title-3 {
+    font-size: calc(1.5rem + ((1vw - 3.6px) * 0.3846));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 360px) {
+  .standard-title-4 {
+    font-size: calc(1.375rem + ((1vw - 3.6px) * 0.2564));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-4 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 360px) {
+  .standard-title-5 {
+    font-size: calc(1.125rem + ((1vw - 3.6px) * 0.2564));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-5 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 360px) {
+  .standard-title-6 {
+    font-size: calc(1rem + ((1vw - 3.6px) * 0.1282));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .standard-title-6 {
+    font-size: 18px;
+  }
 }
