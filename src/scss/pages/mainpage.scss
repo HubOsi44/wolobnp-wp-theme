@@ -10,7 +10,42 @@
 
 // Testmonials
 .testmonials {
-    &__item {}
+    &__item-bottom-quote-icon {
+        position: relative;
+        width: 31px;
+        height: 25px;
+
+        &--left {
+            &:after {
+                content: '';
+                position: absolute;
+                width: 31px;
+                height: 25px;
+                top: -15px;
+                left: -10px;
+                background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        &--right {
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                width: 31px;
+                height: 25px;
+                background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__item-bottom-quote {
+        padding: 10px 30px
+    }
 }
 
 .owl-carousel .owl-nav :is(button.owl-next, button.owl-prev) {

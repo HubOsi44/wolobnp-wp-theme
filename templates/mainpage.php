@@ -84,7 +84,11 @@ $share_email = get_field('share_email');
                                     <p class="text-center text-white standard-title-6"><strong class="text-bg text-bg--green"><?= $cytat_tytul; ?></strong></p>
                                 <?php endif; ?>
                                 <?php if ($quote) : ?>
-                                    <p class="text-center lh-13 fs-14 fst-italic"><?= $quote; ?></p>
+                                    <p class="testmonials__item-bottom-quote position-relative d-inline-block text-center lh-13 fs-14 fst-italic">
+                                        <span class="testmonials__item-bottom-quote-icon testmonials__item-bottom-quote-icon--left"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <?= $quote; ?>
+                                        &nbsp;<span class="testmonials__item-bottom-quote-icon testmonials__item-bottom-quote-icon--right"></span>
+                                    </p>
                                 <?php endif; ?>
                                 <p class="lh-13 fw-bold fs-14">
                                     <?= $quote_autor; ?>
@@ -130,7 +134,7 @@ $share_email = get_field('share_email');
 </section>
 
 <!-- Contact form & Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt -->
-<section class="form-box-wrap py-4 py-lg-5 bg-red">
+<section id="form-box-wrap" class="form-box-wrap py-4 py-lg-5 bg-red">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-3 mb-lg-0">
@@ -181,22 +185,34 @@ $share_email = get_field('share_email');
 <section id="jak-to-dziala" class="jak-to-dziala py-4 py-lg-5 bg-green">
     <div class="container">
         <?= $jak_to_dziala_tytul; ?>
-        <div class="row justify-content-evenly align-items-center">
-            <div class="col-lg-4">
+        <div class="row justify-content-evenly mb-3 mb-lg-5">
+            <div class="col-lg-4 d-flex">
                 <?= $jak_to_dziala_opis; ?>
             </div>
             <div class="col-lg-6" id="counter">
                 <?= $jak_to_dziala_liczby; ?>
             </div>
         </div>
+        <div class="row mb-3 mb-lg-0 justify-content-center">
+            <div class="col-lg-3 d-grid">
+                <a class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold py-2" title="Czytam case study" href="https://www.szlachetnapaczka.pl/wolontariat-pracowniczy/case-study-banku-bnp-paribas-polska/" target="_blank" rel="noopener noreferrer"> Czytam case study <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Co dobrego u Ciebie w firmie? -->
-<section id="co-dobrego" class="co-dobrego py-4 py-lg-5">
+<section id="co-dobrego" class="co-dobrego pt-4 pt-lg-5">
     <div class="container">
-        <?= $co_dobrego_tytul; ?>
-        <?= $co_dobrego_opis; ?>
+        <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <img src="/wp-content/uploads/2023/08/co-dobrego-u-ciebie-w-firmie.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column justify-content-center">
+                <?= $co_dobrego_tytul; ?>
+                <?= $co_dobrego_opis; ?>
+            </div>
+        </div>
     </div>
 </section>
 

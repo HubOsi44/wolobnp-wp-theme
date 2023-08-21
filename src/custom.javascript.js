@@ -28,6 +28,7 @@
         loop: true,
         margin: 10,
         nav: true,
+        dots: false,
         responsiveClass: true,
         navText: [
             "<i class='fa fa-angle-left'></i>",
@@ -110,8 +111,8 @@
     // let template = $('#acceptance-template-wrap .acceptance-template');
     // template.clone().appendTo( "#form-check-input-637 label span.wpcf7-list-item-label" );
     //mytemplate.insertAfter('#form-check-input-637 label span.wpcf7-list-item-label');
+    // const ip = document.getElementById("name").getAttribute('placeholder');
+    // console.log(ip);
 })();
-
-
 
 

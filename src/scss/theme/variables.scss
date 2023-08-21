@@ -82,6 +82,7 @@ $colors: (
 .btn-red-swipe {
     background-color: $red !important;
     color: #fff !important;
+    border: 1px solid $red;
 
     &:before {
         background-color: #fff !important;
@@ -96,7 +97,7 @@ $colors: (
 .btn-white-swipe {
     background-color: $white !important;
     color: $red !important;
-
+    border: 1px solid #fff;
     &:before {
         background-color: $red !important;
     }
