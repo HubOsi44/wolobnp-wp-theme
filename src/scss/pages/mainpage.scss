@@ -6,6 +6,13 @@
     background-attachment: fixed;
     z-index: 0;
     position: relative;
+
+    @include media-breakpoint-down(sm) {
+        background-image: url('/wp-content/uploads/2023/08/hero-top-mobile.jpg') !important;
+        background-size: contain !important;
+        background-color: #24242c;
+        padding-top: 19rem;
+    }
 }
 
 // Testmonials
@@ -179,7 +186,96 @@
 
 //Hero 
 .top-hero {
-    height: 100vh;
+    @include media-breakpoint-up(xl) {
+        height: 100vh;
+    }
+
     background-position: top;
     background-size: cover;
+}
+
+
+.partner {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+}
+
+.simple-testmonial {
+    padding: 10px 0;
+}
+
+.simple-testmonial-icon {
+    position: relative;
+    width: 31px;
+    height: 25px;
+}
+
+.simple-testmonial-icon-left {
+    &:after {
+        content: '';
+        position: absolute;
+        width: 31px;
+        height: 25px;
+        top: -5px;
+        left: -10px;
+        background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.simple-testmonial-icon-right {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        width: 31px;
+        height: 25px;
+        background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.top-hero-testomial {
+    padding: 10px 0;
+}
+
+.top-hero-testomial-icon {
+    position: relative;
+    width: 31px;
+    height: 25px;
+}
+
+.top-hero-testomial-icon-left {
+    &:after {
+        content: '';
+        position: absolute;
+        width: 31px;
+        height: 25px;
+        top: -5px;
+        left: -10px;
+        background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.top-hero-testomial-icon-right {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        width: 31px;
+        height: 25px;
+        background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 470px) {
+    .title-szp-1 {
+        font-size: 28px!important;
+    }
 }

@@ -331,6 +331,12 @@
         }
     }
 
+    &--red-hero {
+        &:after {
+            bottom: 9px;
+        }
+    }
+
     &--green {
         &:after {
             background-color: $green;
@@ -354,5 +360,19 @@
     &--green {
         background: $green;
         box-shadow: 5px 0 0 $green, -5px 0 0 $green;
+    }
+}
+
+//hide recaptcha
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+@include media-breakpoint-up(xl) {
+    .falka-bg {
+        background-image: url('/wp-content/uploads/2023/08/falka.png');
+        background-position: 70px center;
+        background-repeat: repeat-y;
+        background-size: contain;
     }
 }

@@ -41,19 +41,19 @@ $share_email = get_field('share_email');
 
 ?>
 
-<section id="hero" class="top-hero hero" style="background-image: url('<?= $hero_bg; ?>')">
+<section id="hero" class="px-xl-5 d-flex flex-column justify-content-end top-hero hero container-fluid" style="background-image: url('<?= $hero_bg; ?>')">
     <?= $hero_cnt; ?>
 </section>
 
 <!-- Co dobrego u Ciebie w firmie? -->
-<section id="co-dobrego-firmie" class="co-dobrego-firmie py-4 py-lg-5 bg-red container-fluid">
+<section id="co-dobrego-firmie" class="co-dobrego-firmie py-4 py-lg-5 bg-red container-fluid falka-bg">
     <?= $co_dobrego_wstep; ?>
 </section>
 
 <!-- Cytaty -->
 <section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
     <div class="row">
-        <div class="col-xl-3">
+        <div class="col-xl-3 d-flex flex-column justify-content-center">
             <?= $cytaty_opis; ?>
         </div>
         <div class="col-xl-9">
@@ -134,16 +134,16 @@ $share_email = get_field('share_email');
 </section>
 
 <!-- Contact form & Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt -->
-<section id="form-box-wrap" class="form-box-wrap py-4 py-lg-5 bg-red">
+<section id="form-box-wrap" class="form-box-wrap py-4 py-lg-5 bg-red falka-bg">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 mb-3 mb-lg-0">
                 <!-- Form -->
                 <div class="form-box p-4 bg-white">
-                    <?= apply_shortcodes('[contact-form-7 id="7ca430d" title="Formularz kontaktowy"]'); ?>
+                    <?= apply_shortcodes('[contact-form-7 id="7ca430d" title="Formularz kontaktowy" html_id="zgloszenie" html_name="zgloszenie"]'); ?>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="">
                     <?= $share_email; ?>
                 </div>
@@ -182,11 +182,11 @@ $share_email = get_field('share_email');
 </section>
 
 <!-- Jak to działa? Wolontariat z Paczką w Banku BNP Paribas -->
-<section id="jak-to-dziala" class="jak-to-dziala py-4 py-lg-5 bg-green">
+<section id="jak-to-dziala" class="jak-to-dziala py-4 py-lg-5 bg-green falka-bg">
     <div class="container">
         <?= $jak_to_dziala_tytul; ?>
         <div class="row justify-content-evenly mb-3 mb-lg-5">
-            <div class="col-lg-4 d-flex">
+            <div class="col-lg-4 d-flex mb-4 mb-lg-0">
                 <?= $jak_to_dziala_opis; ?>
             </div>
             <div class="col-lg-6" id="counter">
@@ -202,7 +202,7 @@ $share_email = get_field('share_email');
 </section>
 
 <!-- Co dobrego u Ciebie w firmie? -->
-<section id="co-dobrego" class="co-dobrego pt-4 pt-lg-5">
+<section id="co-dobrego" class="co-dobrego pt-4 pt-lg-5 bg-gray-light">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 order-2 order-lg-1">
@@ -217,7 +217,7 @@ $share_email = get_field('share_email');
 </section>
 
 <!-- Partner kampanii -->
-<section id="partner" class="partner py-4 py-lg-5 bg-green">
+<section id="partner" class="partner py-4 py-lg-5 bg-white">
     <div class="container">
         <?= $partner_kampanii_opis; ?>
     </div>
@@ -235,7 +235,7 @@ $share_email = get_field('share_email');
                 ?>
                     <div class="mb-3 col-lg-10">
                         <div class="qa__item">
-                            <h6 class="p-3 mb-0 d-flex justify-content-between" id="heading-<?php echo get_row_index(); ?>" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo get_row_index(); ?>" aria-expanded="false" aria-controls="collapse-<?php echo get_row_index(); ?>">
+                            <h6 class="fw-bold p-3 mb-0 d-flex justify-content-between" id="heading-<?php echo get_row_index(); ?>" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo get_row_index(); ?>" aria-expanded="false" aria-controls="collapse-<?php echo get_row_index(); ?>">
                                 <?php echo $pytanie; ?>
                                 <i class="fa fa-angle-down text-mint" aria-hidden="true"></i>
                             </h6>
