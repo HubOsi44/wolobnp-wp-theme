@@ -53,10 +53,10 @@ $share_email = get_field('share_email');
 <!-- Cytaty -->
 <section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
     <div class="row">
-        <div class="col-xl-3 d-flex flex-column justify-content-center">
+        <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
             <?= $cytaty_opis; ?>
         </div>
-        <div class="col-xl-9">
+        <div class="col-lg-9">
             <!-- Owl Carousel slider with youtube modals -->
             <?php if (have_rows('cytaty')) : ?>
                 <div id="testmonials" class="owl-carousel owl-theme">
@@ -255,6 +255,13 @@ while (have_posts()) : the_post();
     the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wolobnp-wp-theme'));
 endwhile;
 ?>
+
+<!-- Float btn -->
+<div id="float-btn" class="right-float-box">
+    <a href="#form-box-wrap" title="Chcę więcej informacji" class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold right-float-box__btn">
+        Chcę więcej informacji <i class="fa fa-angle-right"></i>
+    </a>
+</div>
 
 <!-- Modal Film -->
 <div class="modal modal-video fade" id="ModalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

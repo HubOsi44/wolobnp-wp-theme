@@ -1,13 +1,14 @@
 (function () {
-    // window.addEventListener('scroll', (event) => {
-    //     var btnscroll = document.querySelector('#top-header');
-    //     var scrollValue = window.pageYOffset || document.documentElement.scrollTop;
-    //     if (scrollValue > 0) {
-    //         btnscroll.classList.add("sticky");
-    //     } else {
-    //         btnscroll.classList.remove("sticky");
-    //     }
-    // });
+    window.addEventListener('scroll', (event) => {
+        const btnscroll = document.querySelector('#float-btn');
+        const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
+        const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollValue > scrolledBox) {
+            btnscroll.classList.add("scrolled");
+        } else {
+            btnscroll.classList.remove("scrolled");
+        }
+    });
 
     //Qookie
     var sName = "cookiesok";
@@ -44,7 +45,7 @@
                 nav: false
             },
             1000: {
-                items: 3,
+                items: 2,
                 nav: false
             },
             1200: {
@@ -113,6 +114,12 @@
     //mytemplate.insertAfter('#form-check-input-637 label span.wpcf7-list-item-label');
     // const ip = document.getElementById("name").getAttribute('placeholder');
     // console.log(ip);
+    //Scrolltop after clicked btn form
+    document.addEventListener('wpcf7mailsent', function (event) {
+        const labelsucces = document.querySelector('.wpcf7-response-output');
+        const topPos = parseInt(labelsucces.offsetTop) - 65;
+        window.scrollTo({ top: topPos, behavior: 'smooth' });
+    }, false);
 })();
 
 

@@ -376,3 +376,24 @@
         background-size: contain;
     }
 }
+
+// Float btn
+.right-float-box {
+    position: fixed;
+    bottom: -150px;
+    right: 0;
+    z-index: 99;
+    transition: 0.5s;
+
+    &.scrolled {
+        bottom: 0;
+        @include media-breakpoint-up(xl) { 
+            bottom: 40px;
+        }
+    }
+
+    &__btn {
+        box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+        transition: 0.5s;
+    }
+}
