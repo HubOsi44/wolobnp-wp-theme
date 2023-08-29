@@ -117,7 +117,7 @@
     //Scrolltop after clicked btn form
     document.addEventListener('wpcf7mailsent', function (event) {
         const labelsucces = document.querySelector('.wpcf7-response-output');
-        const topPos = parseInt(labelsucces.offsetTop) - 65;
+        const topPos = parseInt(labelsucces.offsetTop) - 550;
         window.scrollTo({ top: topPos, behavior: 'smooth' });
     }, false);
 })();
