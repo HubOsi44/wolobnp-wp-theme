@@ -1,266 +1,266 @@
 // Top Menu
-#top-header {
-    @include media-breakpoint-down(xl) {
-        box-shadow: 0 0 16px rgba(50, 50, 50, 0.2);
-    }
-}
+// #top-header {
+//     @include media-breakpoint-down(xl) {
+//         box-shadow: 0 0 16px rgba(50, 50, 50, 0.2);
+//     }
+// }
 
-@include media-breakpoint-down(md) {
-    .navbar-collapse {
-        max-height: calc(100vh - 60px);
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-}
+// @include media-breakpoint-down(md) {
+//     .navbar-collapse {
+//         max-height: calc(100vh - 60px);
+//         overflow-y: auto;
+//         overflow-x: hidden;
+//     }
+// }
 
 // Tom menu with sticky
-#top-header {
-    &.sticky {
-        transition: 0.3s ease-in-out;
+// #top-header {
+//     &.sticky {
+//         transition: 0.3s ease-in-out;
 
-        @include media-breakpoint-up(xl) {
-            margin-top: 0;
+//         @include media-breakpoint-up(xl) {
+//             margin-top: 0;
 
-            .top-header-menu {
-                max-width: 100%;
-                transition: 0.3s ease-in-out;
-                background-color: #fff;
-                box-shadow: 0 0 16px rgba(50, 50, 50, 0.2);
-            }
+//             .top-header-menu {
+//                 max-width: 100%;
+//                 transition: 0.3s ease-in-out;
+//                 background-color: #fff;
+//                 box-shadow: 0 0 16px rgba(50, 50, 50, 0.2);
+//             }
 
-            .navbar-brand {
-                &.top-logo {
-                    img {
-                        width: 100px;
-                    }
-                }
-            }
-        }
+//             .navbar-brand {
+//                 &.top-logo {
+//                     img {
+//                         width: 100px;
+//                     }
+//                 }
+//             }
+//         }
 
-        .navbar-nav {
-            >li {
-                >a {
-                    @include media-breakpoint-up(xl) {
-                        color: #000;
-                        font-size: 1.2rem;
-                        text-shadow: none;
-                        padding: 0.2rem 0.7rem;
+//         .navbar-nav {
+//             >li {
+//                 >a {
+//                     @include media-breakpoint-up(xl) {
+//                         color: #000;
+//                         font-size: 1.2rem;
+//                         text-shadow: none;
+//                         padding: 0.2rem 0.7rem;
 
-                        &::before {
-                            top: 43px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                         &::before {
+//                             top: 43px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
-.navbar-brand {
-    &.top-logo {
-        img {
-            width: 80px;
-            transition: 0.3s ease-in-out;
+// .navbar-brand {
+//     &.top-logo {
+//         img {
+//             width: 80px;
+//             transition: 0.3s ease-in-out;
 
-            @include media-breakpoint-up(xl) {
-                width: 180px;
-            }
-        }
-    }
-}
+//             @include media-breakpoint-up(xl) {
+//                 width: 180px;
+//             }
+//         }
+//     }
+// }
 
-#top-header {
-    transition: 0.3s ease-in-out;
+// #top-header {
+//     transition: 0.3s ease-in-out;
 
-    .navbar-nav {
-        >li {
-            >a {
-                color: #000;
-                text-transform: uppercase;
+//     .navbar-nav {
+//         >li {
+//             >a {
+//                 color: #000;
+//                 text-transform: uppercase;
 
-                @include media-breakpoint-up(xl) {
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                    // letter-spacing: 0.1em;
-                    position: relative;
-                    padding: 1.6rem 0.7rem 1.2rem 0.7rem;
+//                 @include media-breakpoint-up(xl) {
+//                     font-size: 1.25rem;
+//                     font-weight: 600;
+//                     // letter-spacing: 0.1em;
+//                     position: relative;
+//                     padding: 1.6rem 0.7rem 1.2rem 0.7rem;
 
-                    &::before {
-                        display: inline-block;
-                        content: '';
-                        height: 3px;
-                        width: 0;
-                        position: absolute;
-                        left: 0;
-                        // right: 0;
-                        // margin: auto;
-                        top: 80px;
-                        background-color: $green;
-                        transition: 0.3s ease-in-out;
-                    }
-                }
+//                     &::before {
+//                         display: inline-block;
+//                         content: '';
+//                         height: 3px;
+//                         width: 0;
+//                         position: absolute;
+//                         left: 0;
+//                         // right: 0;
+//                         // margin: auto;
+//                         top: 80px;
+//                         background-color: $green;
+//                         transition: 0.3s ease-in-out;
+//                     }
+//                 }
 
-                padding: 0.5rem 0.7rem;
-                margin: 0 10px;
-                font-size: 1.2rem;
-                font-weight: 600;
-                text-align: center;
+//                 padding: 0.5rem 0.7rem;
+//                 margin: 0 10px;
+//                 font-size: 1.2rem;
+//                 font-weight: 600;
+//                 text-align: center;
 
-                &:hover {
-                    color: $green;
+//                 &:hover {
+//                     color: $green;
 
-                    &::before {
-                        width: 100%;
-                    }
-                }
+//                     &::before {
+//                         width: 100%;
+//                     }
+//                 }
 
-                &.active {
-                    color: $green;
+//                 &.active {
+//                     color: $green;
 
-                    &:before {
-                        width: 100%;
-                    }
-                }
+//                     &:before {
+//                         width: 100%;
+//                     }
+//                 }
 
-                @include media-breakpoint-down(xl) {
-                    border-bottom: 1px solid #d8d8d8;
-                    padding: 0.6rem 0.7rem;
-                }
-            }
-        }
-    }
+//                 @include media-breakpoint-down(xl) {
+//                     border-bottom: 1px solid #d8d8d8;
+//                     padding: 0.6rem 0.7rem;
+//                 }
+//             }
+//         }
+//     }
 
-    .navbar-toggler {
-        &:focus {
-            box-shadow: none;
-        }
-    }
-}
+//     .navbar-toggler {
+//         &:focus {
+//             box-shadow: none;
+//         }
+//     }
+// }
 
-.navbar-nav {
-    .dropdown {
-        .dropdown-toggle {
-            position: relative;
+// .navbar-nav {
+//     .dropdown {
+//         .dropdown-toggle {
+//             position: relative;
 
-            &:after {
-                border-right: none;
-                border-left: none;
-                border-top: none;
-                content: "\f107";
-                font-family: FontAwesome;
-                font-style: normal;
-                font-weight: normal;
-                position: absolute;
-                top: 8px;
-                transition: 0.5s;
+//             &:after {
+//                 border-right: none;
+//                 border-left: none;
+//                 border-top: none;
+//                 content: "\f107";
+//                 font-family: FontAwesome;
+//                 font-style: normal;
+//                 font-weight: normal;
+//                 position: absolute;
+//                 top: 8px;
+//                 transition: 0.5s;
 
-                @include media-breakpoint-up(lg) {
-                    display: none;
-                }
+//                 @include media-breakpoint-up(lg) {
+//                     display: none;
+//                 }
 
-            }
+//             }
 
-            &.show {
-                &:after {
-                    transition: 0.5s;
-                    transform: rotate(-180deg);
-                }
-            }
-        }
-    }
-}
+//             &.show {
+//                 &:after {
+//                     transition: 0.5s;
+//                     transform: rotate(-180deg);
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@include media-breakpoint-up(xl) {
-    .dropdown {
-        .dropdown-submenu {
-            top: 0;
-            left: 100%;
-            margin-top: 0;
-        }
-    }
-}
+// @include media-breakpoint-up(xl) {
+//     .dropdown {
+//         .dropdown-submenu {
+//             top: 0;
+//             left: 100%;
+//             margin-top: 0;
+//         }
+//     }
+// }
 
 
-@include media-breakpoint-up(xl) {
-    .navbar-nav {
-        li {
-            &:hover> {
-                ul.dropdown-menu {
-                    display: block;
-                }
-            }
-        }
-    }
+// @include media-breakpoint-up(xl) {
+//     .navbar-nav {
+//         li {
+//             &:hover> {
+//                 ul.dropdown-menu {
+//                     display: block;
+//                 }
+//             }
+//         }
+//     }
 
-    .navbar-expand-xl .navbar-nav .dropdown-menu {
-        animation: growOut .3s ease-in-out forwards;
-    }
-}
+//     .navbar-expand-xl .navbar-nav .dropdown-menu {
+//         animation: growOut .3s ease-in-out forwards;
+//     }
+// }
 
-.dropdown-menu {
-    border-radius: 0;
-    padding: 0;
-    background: #ddd;
+// .dropdown-menu {
+//     border-radius: 0;
+//     padding: 0;
+//     background: #ddd;
 
-    @include media-breakpoint-up(xl) {
-        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-        background: #fff;
-    }
+//     @include media-breakpoint-up(xl) {
+//         box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+//         background: #fff;
+//     }
 
-    &.depth_1 {
-        background: #fff;
-    }
+//     &.depth_1 {
+//         background: #fff;
+//     }
 
-    min-width: 13rem;
-    border: none;
+//     min-width: 13rem;
+//     border: none;
 
-    .menu-item {
-        border-bottom: 1px solid #f1f1f1;
-        background-color: transparent;
+//     .menu-item {
+//         border-bottom: 1px solid #f1f1f1;
+//         background-color: transparent;
 
-        &:last-child {
-            border: none;
-        }
-    }
+//         &:last-child {
+//             border: none;
+//         }
+//     }
 
-    .dropdown-item {
-        padding: 0.6rem 1rem 0.7rem 1.5rem;
+//     .dropdown-item {
+//         padding: 0.6rem 1rem 0.7rem 1.5rem;
 
-        @include media-breakpoint-up(xl) {
-            padding: 1rem 1rem 1rem 1.5rem;
-        }
+//         @include media-breakpoint-up(xl) {
+//             padding: 1rem 1rem 1rem 1.5rem;
+//         }
 
-        font-weight: 500;
-        font-size: 1.2rem;
-        transition: 0.3s ease-in-out;
+//         font-weight: 500;
+//         font-size: 1.2rem;
+//         transition: 0.3s ease-in-out;
 
-        @include media-breakpoint-up(xl) {
-            &:hover {
-                padding-left: 2rem;
-            }
-        }
+//         @include media-breakpoint-up(xl) {
+//             &:hover {
+//                 padding-left: 2rem;
+//             }
+//         }
 
-        &:before {
-            font-family: FontAwesome;
-            content: "\f105";
-            font-style: normal;
-            font-weight: normal;
-            position: absolute;
-            left: 12px;
-            color: #c5c5c5;
-        }
+//         &:before {
+//             font-family: FontAwesome;
+//             content: "\f105";
+//             font-style: normal;
+//             font-weight: normal;
+//             position: absolute;
+//             left: 12px;
+//             color: #c5c5c5;
+//         }
 
-        &:hover {
-            background-color: $red;
-            color: #fff;
-        }
+//         &:hover {
+//             background-color: $red;
+//             color: #fff;
+//         }
 
-        &.active {
-            background-color: $green;
-            color: #fff;
-        }
-    }
-}
+//         &.active {
+//             background-color: $green;
+//             color: #fff;
+//         }
+//     }
+// }
 
 
 // Error 404

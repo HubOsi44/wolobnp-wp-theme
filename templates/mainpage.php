@@ -72,28 +72,29 @@ $share_email = get_field('share_email');
                         <div class="d-flex flex-column testmonials__item">
                             <div class="owl-item-inner  carousel-shadow flex-grow-1">
                                 <div class="testmonials__item-top position-relative">
-                                    <?php if ($img) : ?>
+                                    <?php if ($youtube_link) : ?>
                                         <a class="video-btn pulse-animation pulse-animation--sm pulse-animation--top-left" title="Otwórz" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="<?= $youtube_link; ?>">
                                             <span class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></span>
                                         </a>
-                                        <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto position-relative">
+                                    <?php endif; ?>
+                                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto position-relative">
                                 </div>
-                            <?php endif; ?>
-                            <div class="testmonials__item-bottom text-center p-4">
-                                <?php if ($cytat_tytul) : ?>
-                                    <p class="text-center text-white standard-title-6"><strong class="text-bg text-bg--green"><?= $cytat_tytul; ?></strong></p>
-                                <?php endif; ?>
-                                <?php if ($quote) : ?>
-                                    <p class="testmonials__item-bottom-quote position-relative d-inline-block text-center lh-13 fs-14 fst-italic">
-                                        <span class="testmonials__item-bottom-quote-icon testmonials__item-bottom-quote-icon--left"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <?= $quote; ?>
-                                        &nbsp;<span class="testmonials__item-bottom-quote-icon testmonials__item-bottom-quote-icon--right"></span>
+
+                                <div class="testmonials__item-bottom text-center p-4">
+                                    <?php if ($cytat_tytul) : ?>
+                                        <p class="text-center text-white standard-title-6"><strong class="text-bg text-bg--green"><?= $cytat_tytul; ?></strong></p>
+                                    <?php endif; ?>
+                                    <?php if ($quote) : ?>
+                                        <p class="testmonials__item-bottom-quote position-relative d-inline-block text-center lh-13 fs-14 fst-italic">
+                                            <span class="testmonials__item-bottom-quote-icon testmonials__item-bottom-quote-icon--left"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <?= $quote; ?>
+                                            &nbsp;<span class="testmonials__item-bottom-quote-icon testmonials__item-bottom-quote-icon--right"></span>
+                                        </p>
+                                    <?php endif; ?>
+                                    <p class="lh-13 fw-bold fs-14">
+                                        <?= $quote_autor; ?>
                                     </p>
-                                <?php endif; ?>
-                                <p class="lh-13 fw-bold fs-14">
-                                    <?= $quote_autor; ?>
-                                </p>
-                            </div>
+                                </div>
                             </div>
                         </div>
                         <?php $counter++; ?>
@@ -189,11 +190,11 @@ $share_email = get_field('share_email');
             <div class="col-lg-4 d-flex mb-4 mb-lg-0">
                 <?= $jak_to_dziala_opis; ?>
             </div>
-            <div class="col-lg-6" id="counter">
+            <div class="col-lg-6 d-flex align-items-center" id="counter">
                 <?= $jak_to_dziala_liczby; ?>
             </div>
         </div>
-        <div class="row mb-3 mb-lg-0 justify-content-center">
+        <div class="row mb-3 mb-lg-0 justify-content-center d-none">
             <div class="col-lg-3 d-grid">
                 <a class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold py-2" title="Czytam case study" href="https://www.szlachetnapaczka.pl/wolontariat-pracowniczy/case-study-banku-bnp-paribas-polska/" target="_blank" rel="noopener noreferrer"> Czytam case study <i class="fa fa-angle-right"></i></a>
             </div>

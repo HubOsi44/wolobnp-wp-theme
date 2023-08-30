@@ -16,7 +16,7 @@
         padding-top: 19rem;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 365px) {
         background-size: contain !important;
     }
 }
@@ -257,10 +257,18 @@
     &:after {
         content: '';
         position: absolute;
-        width: 31px;
-        height: 25px;
-        top: -5px;
-        left: -10px;
+
+        @include media-breakpoint-up(xl) {
+            width: 31px;
+            height: 25px;
+            top: -5px;
+            left: -10px;
+        }
+
+        width: 22px;
+        height: 18px;
+        top: 0;
+        left: 0;
         background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
         background-position: center;
         background-size: cover;
@@ -271,9 +279,16 @@
     &:after {
         content: '';
         position: absolute;
-        bottom: -10px;
-        width: 31px;
-        height: 25px;
+
+        @include media-breakpoint-up(xl) {
+            width: 31px;
+            height: 25px;
+            bottom: -10px;
+        }
+
+        bottom: 0;
+        width: 22px;
+        height: 18px;
         background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
         background-position: center;
         background-size: cover;
@@ -282,7 +297,17 @@
 
 @media (max-width: 470px) {
     .title-szp-1 {
-        font-size: 28px !important;
+        font-size: 26px !important;
+    }
+
+    .title-szp-2 {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .title-szp-1 {
+        font-size: 55px !important;
     }
 }
 
@@ -290,6 +315,5 @@
     padding: 0.25rem 0.5rem;
     border: 1px solid #fff;
     border-radius: 35px;
-    background: rgba(255,255,255, .1);
+    background: rgba(255, 255, 255, .1);
 }
-
