@@ -101,6 +101,10 @@ $share_email = get_field('share_email');
                     <?php endwhile; ?>
                 </div>
             <?php endif; ?>
+            <div class="row justify-content-center w-100 d-flex d-lg-none">
+                <div class="col-2 col col-lg-2 d-grid  justify-content-center"><a class="owl-custom-btn-prev owl-custom-btn"><i class="fa fa-angle-left"></i></a></div>
+                <div class="col-2 col-lg-2 d-grid  justify-content-center"><a class="owl-custom-btn-next owl-custom-btn"><i class="fa fa-angle-right"></i></a></div>
+            </div>
         </div>
     </div>
 </section>
