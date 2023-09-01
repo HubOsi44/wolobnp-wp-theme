@@ -120,6 +120,13 @@
         const topPos = parseInt(labelsucces.offsetTop) - 550;
         window.scrollTo({ top: topPos, behavior: 'smooth' });
     }, false);
+    //Copy to clipboard
+      $('.btn-copy-email').click(function() {
+        var $this = $(this);
+        var originalText = $this.html();
+        $this.html('Skopiowane <i class="fa fa-files-o"></i>');
+        setTimeout(function() {
+          $this.html(originalText)
+        }, 5000); 
+      });
 })();
-
-
