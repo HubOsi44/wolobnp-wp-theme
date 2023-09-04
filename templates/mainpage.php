@@ -271,7 +271,7 @@ endwhile;
 <!-- Modal Film -->
 <div class="modal modal-video fade" id="ModalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered align-items-center modal-lg" role="document">
-        <div class="modal-content">
+        <div class="modal-content border-0">
             <div class="modal-body">
                 <button type="button" class="btn-close btn-close-white close-video" data-bs-dismiss="modal" aria-label="Close" title="Zamknij film"></button>
                 <!-- 16:9 aspect ratio -->
