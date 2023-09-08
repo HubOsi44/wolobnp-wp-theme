@@ -198,7 +198,7 @@ $share_email = get_field('share_email');
                 <?= $jak_to_dziala_liczby; ?>
             </div>
         </div>
-        <div class="row mb-3 mb-lg-0 justify-content-center d-none">
+        <div class="row mb-3 mb-lg-0 justify-content-center">
             <div class="col-lg-3 d-grid">
                 <a class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold py-2" title="Czytam case study" href="https://www.szlachetnapaczka.pl/wolontariat-pracowniczy/case-study-banku-bnp-paribas-polska/" target="_blank" rel="noopener noreferrer"> Czytam case study <i class="fa fa-angle-right"></i></a>
             </div>
