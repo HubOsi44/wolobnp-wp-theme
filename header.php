@@ -22,16 +22,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php /* wp_body_open(); 
-    <header id="top-header" class="fixed-top bg-white" role="banner">
+    <?php /* wp_body_open(); */?>
+    <header id="top-header" class="fixed-top bg-white d-none" role="banner">
         <div class="top-header-menu">
             <div class="container-fluid px-xl-4">
                 <nav class="navbar navbar-expand-xl navbar-theme">
-                    <?php if (get_theme_mod('wolobnp_wp_theme_logo')) : ?>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name')); ?>" class="navbar-brand align-items-center top-logo">
-                            <img src="<?php echo esc_url(get_theme_mod('wolobnp_wp_theme_logo')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
-                        </a>
-                    <?php endif; ?>
                     <button class="navbar-toggler navbar-light rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -52,4 +47,3 @@
             </div>
         </div>
     </header>
-    */?>
