@@ -13,7 +13,7 @@ get_header(); ?>
 <main id="main" class="page-404 pt-5" role="main">
     <div class="container py-5">
         <p class="mb-3 mb-lg-5 text-center teko-font standard-title-5 text-green">
-            Przepraszamy za kłopot. <br> A korzystając z okazji chcemy Ci podziękować, że jesteś z nami.
+            Przepraszamy za kłopot.
         </p>
         <div class="row justify-content-center pt-3">
             <div class="col-md-4 d-grid">
