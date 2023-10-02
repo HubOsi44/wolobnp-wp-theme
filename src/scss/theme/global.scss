@@ -397,3 +397,10 @@
         transition: 0.5s;
     }
 }
+
+hr {
+    &.border-top-white {
+        border-top-color: #fff;
+        opacity: 1;
+    }
+}
