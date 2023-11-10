@@ -148,7 +148,7 @@ $share_email = get_field('share_email');
                     <?= apply_shortcodes('[contact-form-7 id="7ca430d" title="Formularz kontaktowy" html_id="zgloszenie" html_name="zgloszenie"]'); ?>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <div class="">
                     <?= $share_email; ?>
                 </div>
