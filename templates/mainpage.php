@@ -50,6 +50,35 @@ $share_email = get_field('share_email');
     <?= $co_dobrego_wstep; ?>
 </section>
 
+<!-- Wolontariat pracowniczy ze Szlachetną Paczką – to działa! -->
+<section id="wolontariat-pracowniczy-boxy" class="wolontariat-pracowniczy-boxy py-4 py-lg-5 bg-gray-light">
+    <div class="container">
+        <?= $wolontariat_pracowniczy_tytul; ?>
+        <?php if (have_rows('wolontariat_pracowniczy_boxy')) : ?>
+            <div class="row">
+                <?php
+                while (have_rows('wolontariat_pracowniczy_boxy')) : the_row();
+                    $tytul = get_sub_field('tytul');
+                    $img = get_sub_field('obrazek');
+                    $opis = get_sub_field('opis');
+                ?>
+                    <div class="col-lg-3 mb-3 mb-lg-0">
+                        <div class="px-lg-4">
+                            <?php if ($img) : ?>
+                                <div class="text-center">
+                                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto mb-2">
+                                </div>
+                            <?php endif; ?>
+                            <?= $tytul; ?>
+                            <?= $opis; ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
+
 <!-- Cytaty -->
 <section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
     <div class="row">
@@ -106,35 +135,6 @@ $share_email = get_field('share_email');
                 <div class="col-2 col-lg-2 d-grid  justify-content-center"><a class="owl-custom-btn-next owl-custom-btn"><i class="fa fa-angle-right"></i></a></div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Wolontariat pracowniczy ze Szlachetną Paczką – to działa! -->
-<section id="wolontariat-pracowniczy-boxy" class="wolontariat-pracowniczy-boxy py-4 py-lg-5 bg-gray-light">
-    <div class="container">
-        <?= $wolontariat_pracowniczy_tytul; ?>
-        <?php if (have_rows('wolontariat_pracowniczy_boxy')) : ?>
-            <div class="row">
-                <?php
-                while (have_rows('wolontariat_pracowniczy_boxy')) : the_row();
-                    $tytul = get_sub_field('tytul');
-                    $img = get_sub_field('obrazek');
-                    $opis = get_sub_field('opis');
-                ?>
-                    <div class="col-lg-3 mb-3 mb-lg-0">
-                        <div class="px-lg-4">
-                            <?php if ($img) : ?>
-                                <div class="text-center">
-                                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto mb-2">
-                                </div>
-                            <?php endif; ?>
-                            <?= $tytul; ?>
-                            <?= $opis; ?>
-                        </div>
-                    </div>
-                <?php endwhile; ?>
-            </div>
-        <?php endif; ?>
     </div>
 </section>
 
