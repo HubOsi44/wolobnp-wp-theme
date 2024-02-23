@@ -12,8 +12,14 @@ get_header(); ?>
 
 <main id="main" class="page-404 pt-5" role="main">
     <div class="container py-5">
-        <p class="mb-3 mb-lg-5 text-center teko-font standard-title-5 text-green">
-            Przepraszamy za kłopot.
+        <p class="mb-0 text-center teko-font text-green fw-bold" style="font-size: 90px;">
+            404
+        </p>
+        <p class="mb-0 text-center teko-font standard-title-2 text-green fw-bold">
+            NIE MOŻNA ZNALEŹĆ PODANEJ STRONY
+        </p>
+        <p class="mb-3 text-center teko-font standard-title-5 text-green">
+            Przepraszamy, strona o podanym adresie nie została odnaleziona.
         </p>
         <div class="row justify-content-center pt-3">
             <div class="col-md-4 d-grid">

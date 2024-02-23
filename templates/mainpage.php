@@ -39,6 +39,9 @@ $faq_tytul = get_field('faq_tytul');
 // Contact form & share option
 $share_email = get_field('share_email');
 
+// ESG Box
+$esg_box_cnt = get_field('esg_box_cnt');
+
 ?>
 
 <section id="hero" class="px-xl-5 d-flex flex-column justify-content-end top-hero hero container-fluid" style="background-image: url('<?= $hero_bg; ?>')">
@@ -79,8 +82,17 @@ $share_email = get_field('share_email');
     </div>
 </section>
 
+<!-- ESG Box -->
+<?php if ($esg_box_cnt) : ?>
+    <section class="esg-box py-lg-5">
+        <div class="container">
+            <?= $esg_box_cnt; ?>
+        </div>
+    </section>
+<?php endif; ?>
+
 <!-- Cytaty -->
-<section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
+<section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid bg-gray-light">
     <div class="row">
         <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
             <?= $cytaty_opis; ?>
@@ -99,7 +111,7 @@ $share_email = get_field('share_email');
                         $youtube_link = get_sub_field('youtube_link');
                     ?>
                         <div class="d-flex flex-column testmonials__item">
-                            <div class="owl-item-inner  carousel-shadow flex-grow-1">
+                            <div class="owl-item-inner carousel-shadow flex-grow-1 bg-white">
                                 <div class="testmonials__item-top position-relative">
                                     <?php if ($youtube_link) : ?>
                                         <a class="video-btn pulse-animation pulse-animation--sm pulse-animation--top-left" title="Otwórz" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="<?= $youtube_link; ?>">

@@ -423,3 +423,87 @@ hr {
         opacity: .50;
     }
 }
+
+// Top header defeault page in defeault.php
+.page-header-top {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+
+    @include media-breakpoint-up(xl) {
+        height: 450px;
+    }
+
+    @media (min-width: 1700px) {
+        height: 550px;
+    }
+}
+
+.page-template-default {
+    h2 {
+        &.wp-block-heading {
+            margin-bottom: 1.5rem;
+
+            strong {
+                text-decoration: underline $red 6px;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 25px;
+
+            &:before {
+                content: "\f14a";
+                font-family: FontAwesome;
+                color: $green;
+                font-size: 18px;
+                padding-right: 0.5em;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+.bg-green-shadow {
+    background: $green;
+    box-shadow: 5px 0 0 $green, -5px 0 0 $green;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: split;
+    box-decoration-break: split;
+    display: inline;
+    color: white;
+}
+
+.page-template {
+    &.page-id-589 {
+        .page-header-top {
+            @include media-breakpoint-down(sm) {
+                background-image: url('https://wolontariatwfirmie.pl/wp-content/uploads/2023/08/hero-top-mobile.jpg') !important;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .esg-box-item {
+        transition: 0.5s;
+        transform: translateY(10%);
+        opacity: 0;
+
+        &.ontop {
+            transform: translateY(0);
+            transition: 0.5s;
+            opacity: 1;
+        }
+    }
+}

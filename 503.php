@@ -19,11 +19,6 @@ get_header(); ?>
 				<p>
 					Serwis www jest chwilowo niedostępny. Pracujemy nad tym, żeby jak najszybciej do Was wrócić. Dziękujemy za cierpliwość.
 				</p>
-				<p class="mb-4">
-					A tymczasem możesz dowiedzieć się więcej o Akademii Przyszłości:
-				</p>
-
-				<a href="www.pl" class="btn btn-red btn-lg">Przejdź na www.hatek.com.pl ></a>
 			</div>
 		</div>
 	</div>

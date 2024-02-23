@@ -63,25 +63,27 @@ a:active {
 }
 
 @media (min-width: 360px) {
-  .standard-title-2 {
+  .standard-title-2  {
     font-size: calc(1.625rem + ((1vw - 3.6px) * 0.641));
     min-height: 0vw;
   }
 }
 @media (min-width: 1920px) {
-  .standard-title-2 {
+  .standard-title-2  {
     font-size: 36px;
   }
 }
 
 @media (min-width: 360px) {
-  .standard-title-3 {
+  .standard-title-3, 
+  h2.wp-block-heading {
     font-size: calc(1.5rem + ((1vw - 3.6px) * 0.3846));
     min-height: 0vw;
   }
 }
 @media (min-width: 1920px) {
-  .standard-title-3 {
+  .standard-title-3,
+  h2.wp-block-heading {
     font-size: 30px;
   }
 }
