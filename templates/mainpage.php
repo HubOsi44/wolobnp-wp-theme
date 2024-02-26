@@ -84,7 +84,7 @@ $esg_box_cnt = get_field('esg_box_cnt');
 
 <!-- ESG Box -->
 <?php if ($esg_box_cnt) : ?>
-    <section class="esg-box py-lg-5">
+    <section class="esg-box py-lg-5 bg-gray-light">
         <div class="container">
             <?= $esg_box_cnt; ?>
         </div>
@@ -92,7 +92,7 @@ $esg_box_cnt = get_field('esg_box_cnt');
 <?php endif; ?>
 
 <!-- Cytaty -->
-<section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid bg-gray-light">
+<section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
     <div class="row">
         <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
             <?= $cytaty_opis; ?>
