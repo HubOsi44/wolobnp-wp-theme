@@ -456,22 +456,24 @@ hr {
         }
     }
 
-    ul {
-        list-style: none;
+    .article-page {
+        ul {
+            list-style: none;
 
-        li {
-            position: relative;
-            padding-left: 25px;
+            li {
+                position: relative;
+                padding-left: 25px;
 
-            &:before {
-                content: "\f14a";
-                font-family: FontAwesome;
-                color: $green;
-                font-size: 18px;
-                padding-right: 0.5em;
-                position: absolute;
-                top: 0;
-                left: 0;
+                &:before {
+                    content: "\f14a";
+                    font-family: FontAwesome;
+                    color: $green;
+                    font-size: 18px;
+                    padding-right: 0.5em;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
             }
         }
     }

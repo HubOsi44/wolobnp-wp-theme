@@ -20,7 +20,7 @@ $share_email = get_field('share_email', 13);
 
 <div id="co-dobrego-firmie"></div>
 
-<main id="main" class="default-page py-4 py-lg-5" role="main">
+<main id="main" class="default-page py-4 py-lg-5 article-page" role="main">
     <div class="container">
         <?php
         while (have_posts()) : the_post();
