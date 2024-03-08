@@ -274,10 +274,30 @@ endwhile;
 ?>
 
 <!-- Float btn -->
-<div id="float-btn" class="right-float-box">
+<div id="float-btn" class="right-float-box d-block d-lg-none">
     <a href="#form-box-wrap" title="Chcę więcej informacji" class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold right-float-box__btn">
         Chcę więcej informacji <i class="fa fa-angle-right"></i>
     </a>
+</div>
+
+<!-- Right widget box -->
+<div id="widget-float-right-box" class="widget-float-right-box d-none d-lg-block bg-red">
+    <span class="widget-float-right-box__close" id="widget-right-btn-close" title="Zamknij">x</span>
+    <div class="row justify-content-center gx-0">
+        <div class="col-9 col-lg-12">
+            <div class="p-2 pb-2">
+                <p class="widget-float-right-box__title lh-13 text-white fw-bold mb-2 text-center">
+                    Jak to działa?
+                </p>
+                <p class="lh-13 text-white mb-3 text-center">
+                    Mamy dla Ciebie <br>
+                    więcej infromacji i&nbsp;materiałów.
+                </p>
+                <a href="#form-box-wrap" class="btn btn-sm btn-red--radius-more btn-white-swipe title-slide-left-anim fw-bold" title="Chcę poznać szczegóły" id="kv-hero-btn">
+                    Chcę poznać szczegóły &gt;</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Modal Film -->
@@ -294,6 +314,5 @@ endwhile;
         </div>
     </div>
 </div>
-
 
 <?php get_footer(); ?>

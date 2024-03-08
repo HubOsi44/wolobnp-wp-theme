@@ -1,6 +1,7 @@
 (function () {
     window.addEventListener('scroll', (event) => {
         const btnscroll = document.querySelector('#float-btn');
+        const widgetscroll = document.querySelector('#widget-float-right-box');
         const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
         const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollValue > scrolledBox) {
@@ -8,6 +9,15 @@
         } else {
             btnscroll.classList.remove("scrolled");
         }
+        if (scrollValue > 0) {
+            widgetscroll.classList.add("scroll");
+        }
+    });
+
+    let btnremovescroll = document.querySelector('#widget-right-btn-close');
+    let widgetbox = document.querySelector('#widget-float-right-box');
+    btnremovescroll.addEventListener('click', function () {
+        widgetbox.classList.add('remove-scroll');
     });
 
     // Owl Carousel Slider with youtube films testmonials
@@ -109,12 +119,12 @@
         window.scrollTo({ top: topPos, behavior: 'smooth' });
     }, false);
     //Copy to clipboard
-      $('.btn-copy-email').click(function() {
+    $('.btn-copy-email').click(function () {
         var $this = $(this);
         var originalText = $this.html();
         $this.html('Skopiowane <i class="fa fa-files-o"></i>');
-        setTimeout(function() {
-          $this.html(originalText)
-        }, 5000); 
-      });
+        setTimeout(function () {
+            $this.html(originalText)
+        }, 5000);
+    });
 })();
