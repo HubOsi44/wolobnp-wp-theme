@@ -259,14 +259,14 @@
         position: absolute;
 
         @include media-breakpoint-up(xl) {
-            width: 31px;
-            height: 25px;
+            width: 24px;
+            height: 19px;
             top: -5px;
-            left: -10px;
+            left: -0;
         }
 
-        width: 22px;
-        height: 18px;
+        width: 18px;
+        height: 14px;
         top: 0;
         left: 0;
         background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
@@ -281,14 +281,14 @@
         position: absolute;
 
         @include media-breakpoint-up(xl) {
-            width: 31px;
-            height: 25px;
+            width: 24px;
+            height: 19px;
             bottom: -10px;
         }
 
         bottom: 0;
-        width: 22px;
-        height: 18px;
+        width: 18px;
+        height: 14px;
         background-image: url('/wp-content/uploads/2023/08/quote-icon.png');
         background-position: center;
         background-size: cover;
@@ -323,4 +323,8 @@
     &__cnt {
         box-shadow: 0 0 15px rgba(0, 0, 0, .3);
     }
+}
+
+.faq-hide {
+    display: none;
 }

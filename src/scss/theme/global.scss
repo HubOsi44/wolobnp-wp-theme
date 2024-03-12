@@ -538,7 +538,7 @@ ul.green-icon {
 .widget-float-right-box {
     width: 212px;
     position: fixed;
-    right: -218px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 16px 0 0 16px;
@@ -563,11 +563,6 @@ ul.green-icon {
     &__title {
         font-size: 19px;
     }
-
-    &.scroll {
-        right: 0;
-    }
-
     &.remove-scroll {
         right: -218px !important;
     }

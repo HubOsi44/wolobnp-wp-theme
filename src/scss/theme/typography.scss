@@ -123,3 +123,29 @@ a:active {
     font-size: 18px;
   }
 }
+
+// Hero top title
+@media (min-width: 360px) {
+  .standard-top-title {
+    font-size: calc(1.125rem + ((1vw - 3.6px) * 1.0897));
+    min-height: 0vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .standard-top-title {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 360px) {
+  .quote-title {
+    font-size: calc(1.0625rem + ((1vw - 3.6px) * 0.2564));
+    min-height: 0vw;
+  }
+}
+@media (min-width: 1920px) {
+  .quote-title {
+    font-size: 21px;
+  }
+}

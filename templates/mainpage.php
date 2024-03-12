@@ -93,7 +93,7 @@ $esg_box_cnt = get_field('esg_box_cnt');
 
 <!-- Cytaty -->
 <section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
-    <div class="row">
+    <div class="row mb-3 mb-lg-4">
         <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
             <?= $cytaty_opis; ?>
         </div>
@@ -148,7 +148,34 @@ $esg_box_cnt = get_field('esg_box_cnt');
             </div>
         </div>
     </div>
+    <div class="container text-center">
+        <a role="button" class="fw-bold read-more text-red px-4 py-2 d-inline-block" data-bs-toggle="collapse" data-bs-target="#collapse-section" aria-expanded="true" aria-controls="collapse-section" style="border: 1px solid #ed1c24;">
+            Czytam więcej <i class="fa fa-angle-down"></i>
+        </a>
+    </div>
 </section>
+
+<!-- Jak to działa? Wolontariat z Paczką w Banku BNP Paribas -->
+<div id="collapse-section" class="collapse">
+    <section id="jak-to-dziala" class="jak-to-dziala py-4 py-lg-5 bg-green falka-bg">
+        <div class="container">
+            <?= $jak_to_dziala_tytul; ?>
+            <div class="row justify-content-evenly mb-3 mb-lg-5">
+                <div class="col-lg-4 d-flex mb-4 mb-lg-0">
+                    <?= $jak_to_dziala_opis; ?>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center" id="counter">
+                    <?= $jak_to_dziala_liczby; ?>
+                </div>
+            </div>
+            <div class="row mb-3 mb-lg-0 justify-content-center">
+                <div class="col-lg-3 d-grid">
+                    <a class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold py-2" title="Czytam case study" href="https://www.szlachetnapaczka.pl/wolontariat-pracowniczy/case-study-banku-bnp-paribas-polska/" target="_blank" rel="noopener noreferrer"> Czytam case study <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 <!-- Contact form & Podziel się informacją ze współpracownikami, zachęć do włączenia w projekt -->
 <section id="form-box-wrap" class="form-box-wrap py-4 py-lg-5 bg-red falka-bg">
@@ -198,26 +225,6 @@ $esg_box_cnt = get_field('esg_box_cnt');
     </div>
 </section>
 
-<!-- Jak to działa? Wolontariat z Paczką w Banku BNP Paribas -->
-<section id="jak-to-dziala" class="jak-to-dziala py-4 py-lg-5 bg-green falka-bg">
-    <div class="container">
-        <?= $jak_to_dziala_tytul; ?>
-        <div class="row justify-content-evenly mb-3 mb-lg-5">
-            <div class="col-lg-4 d-flex mb-4 mb-lg-0">
-                <?= $jak_to_dziala_opis; ?>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center" id="counter">
-                <?= $jak_to_dziala_liczby; ?>
-            </div>
-        </div>
-        <div class="row mb-3 mb-lg-0 justify-content-center">
-            <div class="col-lg-3 d-grid">
-                <a class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold py-2" title="Czytam case study" href="https://www.szlachetnapaczka.pl/wolontariat-pracowniczy/case-study-banku-bnp-paribas-polska/" target="_blank" rel="noopener noreferrer"> Czytam case study <i class="fa fa-angle-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Co dobrego u Ciebie w firmie? -->
 <section id="co-dobrego" class="co-dobrego pt-4 pt-lg-5 bg-gray-light">
     <div class="container">
@@ -245,12 +252,14 @@ $esg_box_cnt = get_field('esg_box_cnt');
     <div class="container">
         <?= $faq_tytul; ?>
         <div class="row justify-content-center">
-            <?php if (have_rows('faq')) : ?>
+            <?php if (have_rows('faq')) :
+                $counterfaq = 0;
+            ?>
                 <?php while (have_rows('faq')) : the_row();
                     $pytanie = get_sub_field('pytanie');
                     $odpowiedz = get_sub_field('odpowiedz');
                 ?>
-                    <div class="mb-3 col-lg-10">
+                    <div class="mb-3 col-lg-10 <?php if ($counterfaq > 2) { echo 'faq-hide'; } ?>">
                         <div class="qa__item">
                             <h6 class="fw-bold p-3 mb-0 d-flex justify-content-between" id="heading-<?php echo get_row_index(); ?>" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo get_row_index(); ?>" aria-expanded="false" aria-controls="collapse-<?php echo get_row_index(); ?>">
                                 <?php echo $pytanie; ?>
@@ -261,7 +270,15 @@ $esg_box_cnt = get_field('esg_box_cnt');
                             </div>
                         </div>
                     </div>
+                    <?php $counterfaq++; ?>
                 <?php endwhile; ?>
+                <?php if ($counterfaq > 2) : ?>
+                    <div class="col-lg-10 text-center">
+                        <a role="button" class="fw-bold read-more text-red px-4 py-2 d-inline-block show-more-faq" style="border: 1px solid #ed1c24;">
+                            Czytam więcej <i class="fa fa-angle-down"></i>
+                        </a>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>

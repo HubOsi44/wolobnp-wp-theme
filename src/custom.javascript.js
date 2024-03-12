@@ -1,16 +1,12 @@
 (function () {
     window.addEventListener('scroll', (event) => {
         const btnscroll = document.querySelector('#float-btn');
-        const widgetscroll = document.querySelector('#widget-float-right-box');
         const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
         const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollValue > scrolledBox) {
             btnscroll.classList.add("scrolled");
         } else {
             btnscroll.classList.remove("scrolled");
-        }
-        if (scrollValue > 0) {
-            widgetscroll.classList.add("scroll");
         }
     });
 
@@ -74,44 +70,6 @@
     jQuery('#ModalVideo').on('hide.bs.modal', function (e) {
         jQuery("#video").attr('src', $videoSrc);
     });
-    // Scroll Counter number
-    if (window.location.pathname === '/') {
-        var counted = 0;
-        $(window).scroll(function () {
-
-            var oTop = $('#counter').offset().top - window.innerHeight;
-
-            if (counted == 0 && $(window).scrollTop() > oTop) {
-                $('.count').each(function () {
-                    var $this = $(this),
-                        countTo = $this.attr('data-count');
-                    $({
-                        countNum: $this.text()
-                    }).animate({
-                        countNum: countTo
-                    },
-                        {
-                            duration: 2000,
-                            easing: 'swing',
-                            step: function () {
-                                $this.text(Math.floor(this.countNum));
-                            },
-                            complete: function () {
-                                $this.text(this.countNum);
-                                //console.log(countTo);
-                            }
-                        });
-                });
-                counted = 1;
-            }
-        });
-    }
-    // Copy form 
-    // let template = $('#acceptance-template-wrap .acceptance-template');
-    // template.clone().appendTo( "#form-check-input-637 label span.wpcf7-list-item-label" );
-    //mytemplate.insertAfter('#form-check-input-637 label span.wpcf7-list-item-label');
-    // const ip = document.getElementById("name").getAttribute('placeholder');
-    // console.log(ip);
     //Scrolltop after clicked btn form
     document.addEventListener('wpcf7mailsent', function (event) {
         const labelsucces = document.querySelector('.wpcf7-response-output');
@@ -126,5 +84,13 @@
         setTimeout(function () {
             $this.html(originalText)
         }, 5000);
+    });
+    // Show more faq list
+    const faqbutton = document.querySelector('.show-more-faq');
+    faqbutton.addEventListener('click', function () {
+        const items = document.querySelectorAll('.faq-hide');
+        items.forEach(item => {
+            item.style.display = 'block';
+        });
     });
 })();
