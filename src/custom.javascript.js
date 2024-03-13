@@ -10,12 +10,21 @@
         }
     });
 
-    let btnremovescroll = document.querySelector('#widget-right-btn-close');
-    let widgetbox = document.querySelector('#widget-float-right-box');
-    btnremovescroll.addEventListener('click', function () {
-        widgetbox.classList.add('remove-scroll');
-    });
-
+    if (window.location.pathname === '/') {
+        let btnremovescroll = document.querySelector('#widget-right-btn-close');
+        let widgetbox = document.querySelector('#widget-float-right-box');
+        btnremovescroll.addEventListener('click', function () {
+            widgetbox.classList.add('remove-scroll');
+        });
+        // Show more faq list
+        const faqbutton = document.querySelector('.show-more-faq');
+        faqbutton.addEventListener('click', function () {
+            const items = document.querySelectorAll('.faq-hide');
+            items.forEach(item => {
+                item.style.display = 'block';
+            });
+        });
+    }
     // Owl Carousel Slider with youtube films testmonials
     var testmonials = $("#testmonials");
     testmonials.owlCarousel({
@@ -84,13 +93,5 @@
         setTimeout(function () {
             $this.html(originalText)
         }, 5000);
-    });
-    // Show more faq list
-    const faqbutton = document.querySelector('.show-more-faq');
-    faqbutton.addEventListener('click', function () {
-        const items = document.querySelectorAll('.faq-hide');
-        items.forEach(item => {
-            item.style.display = 'block';
-        });
     });
 })();

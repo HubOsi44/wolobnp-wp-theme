@@ -308,7 +308,7 @@ endwhile;
                 </p>
                 <p class="lh-13 text-white mb-3 text-center">
                     Mamy dla Ciebie <br>
-                    więcej infromacji i&nbsp;materiałów.
+                    więcej informacji i&nbsp;materiałów.
                 </p>
                 <a href="#form-box-wrap" class="btn btn-sm btn-red--radius-more btn-white-swipe title-slide-left-anim fw-bold" title="Chcę poznać szczegóły" id="kv-hero-btn">
                     Chcę poznać szczegóły &gt;</a>
