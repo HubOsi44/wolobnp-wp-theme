@@ -7,11 +7,13 @@ get_header();
 
 ?>
 
-<?php
-while (have_posts()) : the_post();
-    the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wolobnp-wp-theme'));
-endwhile;
-?>
+<div class="content-before-modal">
+    <?php
+    while (have_posts()) : the_post();
+        the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wolobnp-wp-theme'));
+    endwhile;
+    ?>
+</div>
 
 <!-- Modal Film -->
 <div class="modal modal-materials fade" id="modalMaterials" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
@@ -27,7 +29,7 @@ endwhile;
                             <span class="standard-title-6 lh-13 d-inline-block text-center">
                                 To bardzo proste, wystarczy, że wyslesz do nas swoje dane: imie oraz adres-email,
                                 dzięki temu zdobędziesz dostęp do wielu atrakcyjnych i eksluzywnych materiałów,
-                                pogłebisz wiedze na temat wolontariatu pracowniczego. 
+                                pogłebisz wiedze na temat wolontariatu pracowniczego.
                             </span>
                         </h2>
                     </div>

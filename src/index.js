@@ -34,9 +34,11 @@ function setModalCookie() {
 }
 
 // Sprawdzanie, czy modal powinien zostać pokazany na podstawie ciasteczka
+var contentbeforeModal = document.querySelector('.content-before-modal');
 window.addEventListener('DOMContentLoaded', () => {
     if (!checkModalCookie()) {
         myModal.show();
+        contentbeforeModal.classList.add('blurred-content');
     }
 });
 
@@ -46,5 +48,6 @@ wpcf7Elm.addEventListener('wpcf7mailfailed', function (event) {
     setTimeout(function () {
         myModal.hide();
         setModalCookie(); // Ustawienie ciasteczka po wystąpieniu błędu
+        contentbeforeModal.classList.remove('blurred-content');
     }, 3000);
 }, false);

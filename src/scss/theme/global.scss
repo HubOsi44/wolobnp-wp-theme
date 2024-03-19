@@ -563,6 +563,7 @@ ul.green-icon {
     &__title {
         font-size: 19px;
     }
+
     &.remove-scroll {
         right: -218px !important;
     }
@@ -573,5 +574,15 @@ ul.green-icon {
         background-color: #fff;
         color: #ed1c24 !important;
         font-size: 14px;
+    }
+}
+
+// Page Materials
+.page-template-materials {
+    .blurred-content {
+        filter: blur(3px);
+        &.remove-blurred {
+            filter: blur(0);
+        }
     }
 }
