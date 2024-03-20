@@ -491,7 +491,9 @@ hr {
 }
 
 .page-template {
-    &.page-id-589 {
+
+    &.page-id-589,
+    &.page-template-materials {
         .page-header-top {
             @include media-breakpoint-down(sm) {
                 background-image: url('https://wolontariatwfirmie.pl/wp-content/uploads/2023/08/hero-top-mobile.jpg') !important;
@@ -580,9 +582,22 @@ ul.green-icon {
 // Page Materials
 .page-template-materials {
     .blurred-content {
-        filter: blur(3px);
-        &.remove-blurred {
-            filter: blur(0);
+        filter: blur(4px);
+    }
+
+    .wpcf7 {
+        .wpcf7-response-output {
+            font-size: 15px;
+            line-height: 1.3;
+        }
+    }
+}
+
+//Modal with form materials
+@include media-breakpoint-up(xl) {
+    .modal-materials {
+        .modal-content {
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, .4));
         }
     }
 }
