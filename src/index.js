@@ -39,3 +39,15 @@ if (modalMat) {
         }, 3000);
     }, false);
 }
+
+function copyFunction() {
+    var copyText = document.getElementById("copy-1");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+}
+
+const faqbutton = document.getElementById('btn-copy-email');
+faqbutton.addEventListener('click', function () {
+    copyFunction();
+});

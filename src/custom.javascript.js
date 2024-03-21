@@ -1,30 +1,29 @@
 (function () {
-    window.addEventListener('scroll', (event) => {
-        const btnscroll = document.querySelector('#float-btn');
-        const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
-        const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollValue > scrolledBox) {
-            btnscroll.classList.add("scrolled");
-        } else {
-            btnscroll.classList.remove("scrolled");
-        }
-    });
-
     if (window.location.pathname === '/') {
+        window.addEventListener('scroll', (event) => {
+            const btnscroll = document.querySelector('#float-btn');
+            const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
+            const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollValue > scrolledBox) {
+                btnscroll.classList.add("scrolled");
+            } else {
+                btnscroll.classList.remove("scrolled");
+            }
+        });
         let btnremovescroll = document.querySelector('#widget-right-btn-close');
         let widgetbox = document.querySelector('#widget-float-right-box');
         btnremovescroll.addEventListener('click', function () {
             widgetbox.classList.add('remove-scroll');
         });
-        // Show more faq list
-        const faqbutton = document.querySelector('.show-more-faq');
-        faqbutton.addEventListener('click', function () {
-            const items = document.querySelectorAll('.faq-hide');
-            items.forEach(item => {
-                item.style.display = 'block';
-            });
-        });
     }
+    // Show more faq list
+    const faqbutton = document.getElementById('show-more-faq');
+    faqbutton.addEventListener('click', function () {
+        const items = document.querySelectorAll('.faq-hide');
+        items.forEach(item => {
+            item.style.display = 'block';
+        });
+    });
     // Owl Carousel Slider with youtube films testmonials
     var testmonials = $("#testmonials");
     testmonials.owlCarousel({
