@@ -579,6 +579,27 @@ ul.green-icon {
     }
 }
 
+.btn-red {
+    &--border-red {
+        border: 1px solid $red;
+        color: #000 !important;
+        background: transparent !important;
+        font-size: 14px;
+
+        &:hover,
+        &:focus {
+            border: 1px solid $red;
+            color: #000 !important;
+        }
+    }
+}
+
+.page-template-mainpage {
+    .bottom-form-row-2 {
+        display: none !important;
+    }
+}
+
 // Page Materials
 .page-template-materials {
     .blurred-content {
@@ -598,6 +619,22 @@ ul.green-icon {
             border-radius: 10px;
         }
     }
+
+    .page-header-top {
+        @include media-breakpoint-up(xl) {
+            height: 600px;
+        }
+
+        @media (min-width: 1700px) {
+            height: 750px;
+        }
+    }
+
+    .bottom-form-row-1,
+    .bottom-form-row {
+        display: none !important;
+    }
+
 }
 
 //Modal with form materials
@@ -615,5 +652,43 @@ ul.green-icon {
     @include media-breakpoint-up(xl) {
         height: 120px;
 
+    }
+}
+
+.wstep-boxes {
+    &__wr {
+        @include media-breakpoint-up(xl) {
+            position: relative;
+            top: -50px;
+        }
+    }
+
+    &__item {
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.top-box-header {
+    background: rgba(0, 0, 0, .7);
+
+    &__logo {
+        @include media-breakpoint-up(xl) {
+            height: 190px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        border-radius: 0 10px 10px 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__title-1 {
+            font-size: 20px !important;
+        }
+
+        &__title-2 {
+            font-size: 17px !important;
+        }
     }
 }

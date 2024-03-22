@@ -8,6 +8,12 @@ get_header();
 $top_bg = get_field('top_bg');
 $cnt_modal = get_field('cnt_modal');
 
+// Top header cnt
+$top_header_cnt = get_field('top_header_cnt');
+
+// Wstęp Boxy
+$wstep_boxy_cnt = get_field('wstep_boxy_cnt');
+
 // Poradnik
 $poradnik_cnt = get_field('poradnik_cnt');
 
@@ -30,15 +36,11 @@ $faq_tytul = get_field('faq_tytul', 13);
 ?>
 <main id="main" class="content-before-modal" role="main">
     <section class="d-flex align-items-end page-header-top" style="background-image: url('<?= $top_bg; ?>');">
-        <div class="container">
-            <h1 class="text-center mb-4 mb-lg-5 fw-bold standard-title-1 text-white"><span class="bg-green-shadow"><?php the_title(); ?></span></h1>
-        </div>
+        <?= $top_header_cnt; ?>
     </section>
-    <?php
-    while (have_posts()) : the_post();
-        the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wolobnp-wp-theme'));
-    endwhile;
-    ?>
+
+    <!-- Wstęp -->
+    <?= $wstep_boxy_cnt; ?>
 
     <!-- Pofadnik -->
     <?= $poradnik_cnt; ?>
@@ -109,7 +111,13 @@ $faq_tytul = get_field('faq_tytul', 13);
             </div>
         </div>
     </section>
+    <?php
+    while (have_posts()) : the_post();
+        the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wolobnp-wp-theme'));
+    endwhile;
+    ?>
 </main>
+
 <!-- Modal with form -->
 <div class="modal modal-materials fade" id="modalMaterials" tabindex="-1" role="dialog" aria-labelledby="modalMaterials" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered align-items-center modal-xl" role="document">
