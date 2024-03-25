@@ -583,8 +583,9 @@ ul.green-icon {
     &--border-red {
         border: 1px solid $red;
         color: #000 !important;
-        background: transparent !important;
+        background: #fff !important;
         font-size: 14px;
+        transition: 0.5s;
 
         &:hover,
         &:focus {
@@ -666,6 +667,21 @@ ul.green-icon {
     &__item {
         border-radius: 10px;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+        background: #fff;
+        transition: 0.5s;
+
+        i.box-icon {
+            color: $red;
+        }
+
+        &:hover {
+            transition: 0.5s;
+            background: $red;
+
+            p,i.box-icon {
+                color: #fff;
+            }
+        }
     }
 }
 
