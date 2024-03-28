@@ -129,7 +129,7 @@ $faq_tytul = get_field('faq_tytul', 13);
                     </div>
                     <div class="col-lg-4">
                         <div class="bg-gray-light p-3" style="border-radius: 10px;">
-                            <?= apply_shortcodes('[contact-form-7 id="a39675c" title="Formularz materials" html_id="zgloszenie" html_name="zgloszenie"]'); ?>
+                            <?= apply_shortcodes('[contact-form-7 id="a39675c" title="Formularz materials" html_id="materialy" html_name="materialy"]'); ?>
                         </div>
                     </div>
                 </div>

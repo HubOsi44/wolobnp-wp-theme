@@ -385,11 +385,6 @@ body {
     }
 }
 
-//hide recaptcha
-.grecaptcha-badge {
-    visibility: hidden;
-}
-
 @include media-breakpoint-up(xl) {
     .falka-bg {
         background-image: url('/wp-content/uploads/2023/08/falka.png');
@@ -678,7 +673,8 @@ ul.green-icon {
             transition: 0.5s;
             background: $red;
 
-            p,i.box-icon {
+            p,
+            i.box-icon {
                 color: #fff;
             }
         }
@@ -706,5 +702,23 @@ ul.green-icon {
         &__title-2 {
             font-size: 17px !important;
         }
+    }
+}
+
+.wpcf7-form-control-wrap {
+    input::-webkit-input-placeholder {
+        font-size: 13px;
+    }
+
+    input::-moz-placeholder {
+        font-size: 13px;
+    }
+
+    input:-ms-input-placeholder {
+        font-size: 13px;
+    }
+
+    input:-moz-placeholder {
+        font-size: 13px;
     }
 }
