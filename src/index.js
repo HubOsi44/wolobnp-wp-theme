@@ -15,7 +15,7 @@ if (modalMat) {
     // Funkcja do ustawiania ciasteczka o nazwie "modalShown" na wartość "true" na 7 dni
     function setModalCookie() {
         const d = new Date();
-        d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+        d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
         const expires = "expires=" + d.toUTCString();
         document.cookie = "modalShown=true;" + expires + ";path=/";
     }

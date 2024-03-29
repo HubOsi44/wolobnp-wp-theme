@@ -230,3 +230,9 @@ $color-linkedin: #0a66c2;
 .color-linkedin {
     color: $color-linkedin;
 }
+
+.fw-lg-bold {
+    @include media-breakpoint-up(xl) {
+        font-weight: bold;
+    }
+}
