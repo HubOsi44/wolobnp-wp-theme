@@ -329,6 +329,16 @@ body {
     #CybotCookiebotDialogFooter .CybotCookiebotDialogBodyButton {
         background-color: transparent;
     }
+
+    @include media-breakpoint-down(sm) {
+        #CookiebotWidget {
+            box-shadow: none;
+        }
+
+        #CookiebotWidget .CookiebotWidget-logo {
+            opacity: 0;
+        }
+    }
 }
 
 //underline line effect
@@ -491,7 +501,8 @@ hr {
     &.page-template-materials {
         .page-header-top {
             @include media-breakpoint-down(sm) {
-                background-image: url('https://wolontariatwfirmie.pl/wp-content/uploads/2023/08/hero-top-mobile.jpg') !important;
+                background-image: url('https://wolontariatwfirmie.pl/wp-content/uploads/2024/04/wolontariatwfirmie-top-mobile-3-min.jpg') !important;
+                // background-image: url('https://wolontariatwfirmie.pl/wp-content/uploads/2023/08/hero-top-mobile.jpg') !important;
             }
         }
     }

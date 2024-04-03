@@ -12,7 +12,7 @@ if (modalMat) {
     function checkModalCookie() {
         return document.cookie.split(';').some((item) => item.trim().startsWith('modalShown='));
     }
-    // Funkcja do ustawiania ciasteczka o nazwie "modalShown" na wartość "true" na 7 dni
+    // Funkcja do ustawiania ciasteczka o nazwie "modalShown" na wartość "true" na 30 dni
     function setModalCookie() {
         const d = new Date();
         d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
