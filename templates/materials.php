@@ -127,8 +127,8 @@ $faq_tytul = get_field('faq_tytul', 13);
                     <div class="col-lg-8 d-flex flex-column justify-content-center">
                         <?= $cnt_modal; ?>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="bg-gray-light p-3" style="border-radius: 10px;">
+                    <div class="col-lg-4 d-flex flex-column">
+                        <div class="bg-gray-light p-3 flex-grow-1 border-radius-10">
                             <?= apply_shortcodes('[contact-form-7 id="a39675c" title="Formularz materials" html_id="materialy" html_name="materialy"]'); ?>
                         </div>
                     </div>
