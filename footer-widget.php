@@ -1,5 +1,5 @@
 <!-- Footer -->
-<div class="copyright-box">
+<div class="copyright-box mb-4">
     <div class="container py-4">
         <hr>
         <div class="text-center">
