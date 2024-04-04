@@ -51,3 +51,17 @@ const faqbutton = document.getElementById('btn-copy-email');
 faqbutton.addEventListener('click', function () {
     copyFunction();
 });
+
+const formmain = document.querySelector('.form-box .wpcf7');
+if (formmain) {
+    function setModalCookie2() {
+        const d = new Date();
+        d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = "modalShown=true;" + expires + ";path=/";
+    }
+    const wpcf7Elm2 = document.querySelector('.form-box .wpcf7');
+    wpcf7Elm2.addEventListener('wpcf7mailsent', function (event) {
+        setModalCookie2();
+    }, false);
+}
