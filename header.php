@@ -23,14 +23,14 @@
 
 <body <?php body_class(); ?>>
     <?php /* wp_body_open(); */?>
-    <header id="top-header" class="fixed-top bg-white d-none" role="banner">
+    <header id="top-header" class="sticky-lg-top" role="banner">
         <div class="top-header-menu">
             <div class="container-fluid px-xl-4">
-                <nav class="navbar navbar-expand-xl navbar-theme">
+                <nav class="navbar navbar-expand-xl navbar-theme d-flex justify-content-end">
                     <button class="navbar-toggler navbar-light rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-md-end" id="main-menu">
+                    <div class="collapse navbar-collapse justify-content-center" id="main-menu">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'main-menu',
