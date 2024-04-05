@@ -42,6 +42,9 @@ $share_email = get_field('share_email');
 // ESG Box
 $esg_box_cnt = get_field('esg_box_cnt');
 
+// Modal Popup Cnt
+$cnt_modal_popup = get_field('cnt_modal_popup');
+
 ?>
 
 <section id="hero" class="px-xl-5 d-flex flex-column justify-content-end top-hero hero container-fluid" style="background-image: url('<?= $hero_bg; ?>')">
@@ -259,7 +262,9 @@ $esg_box_cnt = get_field('esg_box_cnt');
                     $pytanie = get_sub_field('pytanie');
                     $odpowiedz = get_sub_field('odpowiedz');
                 ?>
-                    <div class="mb-3 col-lg-10 <?php if ($counterfaq > 2) { echo 'faq-hide'; } ?>">
+                    <div class="mb-3 col-lg-10 <?php if ($counterfaq > 2) {
+                                                    echo 'faq-hide';
+                                                } ?>">
                         <div class="qa__item">
                             <h6 class="fw-bold p-3 mb-0 d-flex justify-content-between" id="heading-<?php echo get_row_index(); ?>" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo get_row_index(); ?>" aria-expanded="false" aria-controls="collapse-<?php echo get_row_index(); ?>">
                                 <?php echo $pytanie; ?>
@@ -312,6 +317,20 @@ endwhile;
                 </p>
                 <a href="https://wolontariatwfirmie.pl/materialy-do-pobrania/" class="btn btn-sm btn-red--radius-more btn-white-swipe title-slide-left-anim fw-bold" title="Chcę poznać szczegóły" id="kv-hero-btn">
                     Chcę poznać szczegóły &gt;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal popup info -->
+<div class="modal modal-popup fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopup" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered align-items-center modal-lg" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <?= $cnt_modal_popup; ?>
             </div>
         </div>
     </div>
