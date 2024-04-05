@@ -292,7 +292,7 @@ endwhile;
 
 <!-- Float btn -->
 <div id="float-btn" class="right-float-box d-block d-lg-none">
-    <a href="#form-box-wrap" title="Chcę więcej informacji" class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold right-float-box__btn">
+    <a href="https://wolontariatwfirmie.pl/materialy-do-pobrania/" title="Chcę więcej informacji" class="btn btn-red--radius-more btn-red-swipe title-slide-left-anim fw-bold right-float-box__btn">
         Chcę więcej informacji <i class="fa fa-angle-right"></i>
     </a>
 </div>
@@ -310,7 +310,7 @@ endwhile;
                     Mamy dla Ciebie <br>
                     więcej informacji i&nbsp;materiałów.
                 </p>
-                <a href="#form-box-wrap" class="btn btn-sm btn-red--radius-more btn-white-swipe title-slide-left-anim fw-bold" title="Chcę poznać szczegóły" id="kv-hero-btn">
+                <a href="https://wolontariatwfirmie.pl/materialy-do-pobrania/" class="btn btn-sm btn-red--radius-more btn-white-swipe title-slide-left-anim fw-bold" title="Chcę poznać szczegóły" id="kv-hero-btn">
                     Chcę poznać szczegóły &gt;</a>
             </div>
         </div>

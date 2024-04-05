@@ -17,14 +17,17 @@
         });
     }
     // Show more faq list
-    const faqbutton = document.getElementById('show-more-faq');
-    faqbutton.addEventListener('click', function () {
-        const items = document.querySelectorAll('.faq-hide');
-        items.forEach(item => {
-            item.style.display = 'block';
+    const faqlist = document.getElementById('show-more-faq');
+    if (faqlist) {
+        const faqbutton = document.getElementById('show-more-faq');
+        faqbutton.addEventListener('click', function () {
+            const items = document.querySelectorAll('.faq-hide');
+            items.forEach(item => {
+                item.style.display = 'block';
+            });
+            faqbutton.style.display = 'none';
         });
-        faqbutton.style.display = 'none';
-    });
+    }
     // Owl Carousel Slider with youtube films testmonials
     var testmonials = $("#testmonials");
     testmonials.owlCarousel({

@@ -326,14 +326,16 @@ body {
         background-color: transparent;
     }
 
-    @include media-breakpoint-down(sm) {
-        #CookiebotWidget {
-            box-shadow: none;
-        }
+    #CookiebotWidget {
+        box-shadow: none;
+    }
 
-        #CookiebotWidget .CookiebotWidget-logo {
-            opacity: 0;
-        }
+    #CookiebotWidget .CookiebotWidget-logo {
+        opacity: 0;
+    }
+
+    #CookiebotWidget:not(.CookiebotWidget-open):hover {
+        box-shadow: none;
     }
 }
 
@@ -404,7 +406,7 @@ body {
 .right-float-box {
     position: fixed;
     bottom: -150px;
-    left: 0;
+    right: 0;
     z-index: 99;
     transition: 0.5s;
 
@@ -732,4 +734,15 @@ ul.green-icon {
 
 .show-more-faq {
     display: inline-block;
+}
+
+.grecaptcha-badge {
+    width: 70px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    left: 4px !important;
+}
+
+.grecaptcha-badge:hover {
+    width: 256px !important;
 }
