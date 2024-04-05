@@ -23,6 +23,7 @@
         items.forEach(item => {
             item.style.display = 'block';
         });
+        faqbutton.style.display = 'none';
     });
     // Owl Carousel Slider with youtube films testmonials
     var testmonials = $("#testmonials");

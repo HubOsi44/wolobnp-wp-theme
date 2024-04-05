@@ -102,7 +102,7 @@ $faq_tytul = get_field('faq_tytul', 13);
                     <?php endwhile; ?>
                     <?php if ($counterfaq > 2) : ?>
                         <div class="col-lg-10 text-center">
-                            <a role="button" class="fw-bold read-more text-red px-4 py-2 d-inline-block show-more-faq" id="show-more-faq" style="border: 1px solid #ed1c24;">
+                            <a role="button" class="fw-bold read-more text-red px-4 py-2 show-more-faq" id="show-more-faq" style="border: 1px solid #ed1c24;">
                                 Czytam więcej <i class="fa fa-angle-down"></i>
                             </a>
                         </div>
