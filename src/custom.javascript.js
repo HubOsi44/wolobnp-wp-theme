@@ -77,7 +77,7 @@
     });
     jQuery('#ModalVideo').on('shown.bs.modal', function (e) {
         // jQuery("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=0&amp;showinfo=0");
-        jQuery("#video").attr('src', $videoSrc + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1");
+        jQuery("#video").attr('src', $videoSrc + "?modestbranding=1&rel=0&controls=1&showinfo=0&html5=1&autoplay=1");
     });
     jQuery('#ModalVideo').on('hide.bs.modal', function (e) {
         jQuery("#video").attr('src', $videoSrc);

@@ -65,3 +65,29 @@ if (formmain) {
         setModalCookie2();
     }, false);
 }
+
+
+const modalPop = document.getElementById('modalPopup');
+if (modalPop) {
+
+    var modalisOpen = false;
+    var modalPopup;
+    var scrollHandler = (event) => {
+        const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
+        const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (!modalisOpen && scrollValue > scrolledBox) {
+            modalPopup = new Modal(document.getElementById('modalPopup'));
+            modalPopup.show();
+            modalisOpen = true;
+        }
+    };
+
+    window.addEventListener('scroll', scrollHandler);
+
+    document.querySelector('.btn-close-popup').addEventListener('click', () => {
+        modalPopup.hide();
+        modalisOpen = false;
+        window.removeEventListener('scroll', scrollHandler);
+    });
+}

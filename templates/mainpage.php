@@ -326,10 +326,10 @@ endwhile;
 <div class="modal modal-popup fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopup" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered align-items-center modal-lg" role="document">
         <div class="modal-content border-0">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
             <div class="modal-body">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close btn-close-popup" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <?= $cnt_modal_popup; ?>
             </div>
         </div>
