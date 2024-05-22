@@ -1,4 +1,4 @@
 # wolobnp-wp-theme
-Wolontariat w pracy BNP
+Wolontariat pracowniczy ze Szlachetną Paczką - Co dobrego u Ciebie w firmie?
 
 Szablon Bootstrap v5.3.1
