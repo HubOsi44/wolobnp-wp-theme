@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const Dotenv = require("dotenv-webpack");
+// const Dotenv = require("dotenv-webpack");
 
 module.exports = (env, argv) => {
   return {
@@ -67,9 +67,9 @@ module.exports = (env, argv) => {
         jQuery: 'jquery',
         'window.jQuery': 'jquery'
       }),
-      new Dotenv({
-        path: "./.env"
-      }),
+      // new Dotenv({
+      //   path: "./.env"
+      // }),
       new MiniCssExtractPlugin({
         filename: "[name].css",
         chunkFilename: "[id].css"
