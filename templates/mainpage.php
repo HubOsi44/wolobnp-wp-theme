@@ -97,10 +97,10 @@ $cnt_modal_popup = get_field('cnt_modal_popup');
 <!-- Cytaty -->
 <section id="testmonials-wrap" class="testmonials py-4 py-lg-5 container-fluid">
     <div class="row mb-3 mb-lg-4">
-        <div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">
+        <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center">
             <?= $cytaty_opis; ?>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-8">
             <!-- Owl Carousel slider with youtube modals -->
             <?php if (have_rows('cytaty')) : ?>
                 <div id="testmonials" class="owl-carousel owl-theme">

@@ -31,7 +31,7 @@
     // Owl Carousel Slider with youtube films testmonials
     var testmonials = $("#testmonials");
     testmonials.owlCarousel({
-        loop: true,
+        //loop: true,
         margin: 10,
         nav: true,
         dots: false,
@@ -54,11 +54,11 @@
                 nav: false
             },
             1200: {
-                items: 3,
+                items: 2,
                 nav: false
             },
             1700: {
-                items: 4,
+                items: 2,
                 nav: false
             }
         }
