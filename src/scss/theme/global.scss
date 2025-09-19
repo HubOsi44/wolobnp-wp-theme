@@ -506,19 +506,19 @@ hr {
     }
 }
 
-@include media-breakpoint-up(xl) {
-    .esg-box-item {
-        transition: 0.5s;
-        transform: translateY(10%);
-        opacity: 0;
+// @include media-breakpoint-up(xl) {
+//     .esg-box-item {
+//         transition: 0.5s;
+//         transform: translateY(10%);
+//         opacity: 0;
 
-        &.ontop {
-            transform: translateY(0);
-            transition: 0.5s;
-            opacity: 1;
-        }
-    }
-}
+//         &.ontop {
+//             transform: translateY(0);
+//             transition: 0.5s;
+//             opacity: 1;
+//         }
+//     }
+// }
 
 ul.green-icon {
     list-style: none;

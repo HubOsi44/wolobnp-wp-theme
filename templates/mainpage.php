@@ -117,11 +117,13 @@ $cnt_modal_popup = get_field('cnt_modal_popup');
                             <div class="owl-item-inner carousel-shadow flex-grow-1 bg-white">
                                 <div class="testmonials__item-top position-relative">
                                     <?php if ($youtube_link) : ?>
-                                        <a class="video-btn pulse-animation pulse-animation--sm pulse-animation--top-left" title="Otwórz" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="<?= $youtube_link; ?>">
-                                            <span class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></span>
-                                        </a>
-                                    <?php endif; ?>
-                                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto position-relative">
+                                        <div class="video-btn-box" role="button" type="button" data-bs-toggle="modal" data-bs-target="#ModalVideo" data-src="<?= $youtube_link; ?>">
+                                            <div class="video-btn pulse-animation pulse-animation--sm pulse-animation--top-left" title="Otwórz">
+                                                <span class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></span>
+                                            </div>
+                                        <?php endif; ?>
+                                        <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" class="img-fluid mx-auto position-relative">
+                                        </div>
                                 </div>
 
                                 <div class="testmonials__item-bottom text-center p-4">
@@ -303,7 +305,7 @@ endwhile;
 </div>
 
 <!-- Right widget box -->
-<div id="widget-float-right-box" class="widget-float-right-box d-none d-lg-block bg-red">
+<!-- <div id="widget-float-right-box" class="widget-float-right-box d-none d-lg-block bg-red">
     <span class="widget-float-right-box__close" id="widget-right-btn-close" title="Zamknij">x</span>
     <div class="row justify-content-center gx-0">
         <div class="col-9 col-lg-12">
@@ -320,10 +322,10 @@ endwhile;
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Modal popup info -->
-<div class="modal modal-popup fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopup" aria-hidden="true">
+<!-- <div class="modal modal-popup fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopup" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered align-items-center modal-lg" role="document">
         <div class="modal-content border-0">
             <div class="modal-body">
@@ -334,7 +336,7 @@ endwhile;
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Modal Film -->
 <div class="modal modal-video fade" id="ModalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

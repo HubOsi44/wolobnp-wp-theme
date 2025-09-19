@@ -1,21 +1,21 @@
 (function () {
-    if (window.location.pathname === '/') {
-        window.addEventListener('scroll', (event) => {
-            const btnscroll = document.querySelector('#float-btn');
-            const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
-            const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollValue > scrolledBox) {
-                btnscroll.classList.add("scrolled");
-            } else {
-                btnscroll.classList.remove("scrolled");
-            }
-        });
-        let btnremovescroll = document.querySelector('#widget-right-btn-close');
-        let widgetbox = document.querySelector('#widget-float-right-box');
-        btnremovescroll.addEventListener('click', function () {
-            widgetbox.classList.add('remove-scroll');
-        });
-    }
+    // if (window.location.pathname === '/') {
+    //     window.addEventListener('scroll', (event) => {
+    //         const btnscroll = document.querySelector('#float-btn');
+    //         const scrolledBox = document.querySelector('#co-dobrego-firmie').offsetTop;
+    //         const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
+    //         if (scrollValue > scrolledBox) {
+    //             btnscroll.classList.add("scrolled");
+    //         } else {
+    //             btnscroll.classList.remove("scrolled");
+    //         }
+    //     });
+    //     let btnremovescroll = document.querySelector('#widget-right-btn-close');
+    //     let widgetbox = document.querySelector('#widget-float-right-box');
+    //     btnremovescroll.addEventListener('click', function () {
+    //         widgetbox.classList.add('remove-scroll');
+    //     });
+    // }
     // Show more faq list
     const faqlist = document.getElementById('show-more-faq');
     if (faqlist) {
@@ -72,7 +72,7 @@
     });
     // Open youtube testmonials on modal
     let $videoSrc;
-    jQuery('.video-btn').click(function () {
+    jQuery('.video-btn-box').click(function () {
         $videoSrc = jQuery(this).data("src");
     });
     jQuery('#ModalVideo').on('shown.bs.modal', function (e) {
