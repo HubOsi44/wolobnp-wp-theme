@@ -305,7 +305,7 @@ endwhile;
 </div>
 
 <!-- Right widget box -->
-<!-- <div id="widget-float-right-box" class="widget-float-right-box d-none d-lg-block bg-red">
+<div id="widget-float-right-box" class="widget-float-right-box d-none d-lg-block bg-red">
     <span class="widget-float-right-box__close" id="widget-right-btn-close" title="Zamknij">x</span>
     <div class="row justify-content-center gx-0">
         <div class="col-9 col-lg-12">
@@ -322,10 +322,10 @@ endwhile;
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Modal popup info -->
-<!-- <div class="modal modal-popup fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopup" aria-hidden="true">
+<div class="modal modal-popup fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopup" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered align-items-center modal-lg" role="document">
         <div class="modal-content border-0">
             <div class="modal-body">
@@ -336,7 +336,7 @@ endwhile;
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Modal Film -->
 <div class="modal modal-video fade" id="ModalVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
