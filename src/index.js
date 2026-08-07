@@ -1,5 +1,5 @@
 require("bootstrap");
-import 'owl.carousel';
+import "owl.carousel";
 import './custom.javascript';
 import { Modal } from 'bootstrap';
 

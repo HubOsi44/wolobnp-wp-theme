@@ -1,11 +1,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-// Fallback: najpierw spróbuj sass-embedded, jeśli nie ma to zwykły sass
-const sassImpl = (() => {
-  try { return require("sass-embedded"); } catch { return require("sass"); }
-})();
+const sassImpl = require("sass");
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === "production";
@@ -56,6 +52,14 @@ module.exports = (env, argv) => {
                 sourceMap: true,
                 implementation: sassImpl,
                 sassOptions: {
+                  // Keep build output clean from dependency deprecations.
+                  quietDeps: true,
+                  silenceDeprecations: [
+                    "legacy-js-api",
+                    "import",
+                    "global-builtin",
+                    "color-functions",
+                  ],
                   outputStyle: isProd ? "compressed" : "expanded",
                 },
               },

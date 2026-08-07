@@ -30,7 +30,8 @@
     }
     // Owl Carousel Slider with youtube films testmonials
     var testmonials = $("#testmonials");
-    testmonials.owlCarousel({
+    if (testmonials.length && $.fn && $.fn.owlCarousel) {
+        testmonials.owlCarousel({
         //loop: true,
         margin: 10,
         nav: true,
@@ -62,14 +63,15 @@
                 nav: false
             }
         }
-    });
-    // Custom Button
-    $('.owl-custom-btn-next').click(function () {
-        testmonials.trigger('next.owl.carousel');
-    });
-    $('.owl-custom-btn-prev').click(function () {
-        testmonials.trigger('prev.owl.carousel');
-    });
+        });
+        // Custom Button
+        $('.owl-custom-btn-next').click(function () {
+            testmonials.trigger('next.owl.carousel');
+        });
+        $('.owl-custom-btn-prev').click(function () {
+            testmonials.trigger('prev.owl.carousel');
+        });
+    }
     // Open youtube testmonials on modal
     let $videoSrc;
     jQuery('.video-btn-box').click(function () {

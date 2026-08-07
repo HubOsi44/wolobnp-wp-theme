@@ -5,7 +5,7 @@
     }
 
     background: rgba(255, 255, 255, .7);
-    z-index: 2000; 
+    z-index: 2000;
 }
 
 @include media-breakpoint-down(md) {
@@ -20,6 +20,7 @@
 #top-header {
     &.sticky {
         transition: 0.3s ease-in-out;
+        border-bottom: 1px solid #dedede;
 
         @include media-breakpoint-up(xl) {
             margin-top: 0;
@@ -74,6 +75,7 @@
 
 #top-header {
     transition: 0.3s ease-in-out;
+    border-bottom: 1px solid #dedede;
 
     .navbar-nav {
         >li {
