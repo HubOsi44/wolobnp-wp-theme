@@ -45,6 +45,8 @@ $esg_box_cnt = get_field('esg_box_cnt');
 // Modal Popup Cnt
 $cnt_modal_popup = get_field('cnt_modal_popup');
 
+// Banner event
+$banner_event = get_field('banner_event');
 ?>
 
 <section id="hero" class="px-xl-5 d-flex flex-column justify-content-end top-hero hero container-fluid" style="background-image: url('<?= $hero_bg; ?>')">
@@ -55,6 +57,13 @@ $cnt_modal_popup = get_field('cnt_modal_popup');
 <section id="co-dobrego-firmie" class="co-dobrego-firmie py-4 py-lg-5 bg-red container-fluid falka-bg">
     <?= $co_dobrego_wstep; ?>
 </section>
+
+<!-- Banner event -->
+ <?php /* 
+<section class="event-busines-care-lucky py-4 py-lg-5">
+    <?= $banner_event; ?>
+</section>
+*/ ?>
 
 <!-- Wolontariat pracowniczy ze Szlachetną Paczką – to działa! -->
 <section id="wolontariat-pracowniczy-boxy" class="wolontariat-pracowniczy-boxy py-4 py-lg-5 bg-gray-light">
