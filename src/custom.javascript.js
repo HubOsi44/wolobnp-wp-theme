@@ -73,16 +73,27 @@
         });
     }
     // Open youtube testmonials on modal
-    let $videoSrc;
-    jQuery('.video-btn-box').click(function () {
-        $videoSrc = jQuery(this).data("src");
+    const $modalVideo = jQuery('#ModalVideo');
+    const $video = jQuery('#video');
+
+    $modalVideo.on('show.bs.modal', function (e) {
+        const src = jQuery(e.relatedTarget).data('src');
+        if (!src) return;
+        const separator = src.indexOf('?') === -1 ? '?' : '&';
+        $modalVideo.addClass('is-loading');
+        $video.attr('src', src + separator + 'rel=0&controls=1&autoplay=1');
     });
-    jQuery('#ModalVideo').on('shown.bs.modal', function (e) {
-        // jQuery("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=0&amp;showinfo=0");
-        jQuery("#video").attr('src', $videoSrc + "?modestbranding=1&rel=0&controls=1&showinfo=0&html5=1&autoplay=1");
+
+    $video.on('load', function () {
+        if ($video.attr('src')) {
+            $modalVideo.removeClass('is-loading');
+        }
     });
-    jQuery('#ModalVideo').on('hide.bs.modal', function (e) {
-        jQuery("#video").attr('src', $videoSrc);
+
+    // Pusty src, żeby poprzedni film nie mignął przy otwarciu kolejnego
+    $modalVideo.on('hidden.bs.modal', function () {
+        $video.attr('src', '');
+        $modalVideo.removeClass('is-loading');
     });
     //Scrolltop after clicked btn form
     document.addEventListener('wpcf7mailsent', function (event) {
